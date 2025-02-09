@@ -6,43 +6,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
-    --color-green-500: oklch(0.723 0.219 149.579);
-    --color-green-600: oklch(0.627 0.194 149.214);
-    --color-emerald-600: oklch(0.596 0.145 163.225);
-    --color-sky-50: oklch(0.977 0.013 236.62);
     --color-sky-300: oklch(0.828 0.111 230.318);
     --color-sky-500: oklch(0.685 0.169 237.323);
-    --color-pink-50: oklch(0.971 0.014 343.198);
-    --color-pink-300: oklch(0.823 0.12 346.018);
-    --color-pink-500: oklch(0.656 0.241 354.308);
-    --color-pink-600: oklch(0.592 0.249 0.584);
-    --color-rose-300: oklch(0.81 0.117 11.638);
     --color-rose-500: oklch(0.645 0.246 16.439);
-    --color-rose-600: oklch(0.586 0.253 17.585);
-    --color-slate-50: oklch(0.984 0.003 247.858);
     --color-slate-500: oklch(0.554 0.046 257.417);
-    --color-white: #fff;
     --spacing: 0.25rem;
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
-    --text-9xl: 8rem;
-    --text-9xl--line-height: 1;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
     --tracking-wider: 0.05em;
     --leading-loose: 2;
     --default-font-family: var(--font-sans);
@@ -201,60 +171,8 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
-  .relative {
-    position: relative;
-  }
-  .static {
-    position: static;
-  }
-  .line-clamp-3 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-  }
-  .block {
-    display: block;
-  }
-  .hidden {
-    display: none;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .list-item {
-    display: list-item;
-  }
-  .table {
-    display: table;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .bg-sky-50 {
-    background-color: var(--color-sky-50);
-  }
-  .bg-sky-500 {
-    background-color: var(--color-sky-500);
-  }
-  .bg-slate-50 {
-    background-color: var(--color-slate-50);
-  }
   .bg-slate-500 {
     background-color: var(--color-slate-500);
-  }
-  .pt-1 {
-    padding-top: calc(var(--spacing) * 1);
   }
   .pt-13 {
     padding-top: calc(var(--spacing) * 13);
@@ -262,53 +180,9 @@
   .text-center {
     text-align: center;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
-  .text-7xl {
-    font-size: var(--text-7xl);
-    line-height: var(--tw-leading, var(--text-7xl--line-height));
-  }
-  .text-8xl {
-    font-size: var(--text-8xl);
-    line-height: var(--tw-leading, var(--text-8xl--line-height));
-  }
-  .text-9xl {
-    font-size: var(--text-9xl);
-    line-height: var(--tw-leading, var(--text-9xl--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-5xl\/loose {
     font-size: var(--text-5xl);
     line-height: var(--leading-loose);
-  }
-  .leading-2 {
-    --tw-leading: calc(var(--spacing) * 2);
-    line-height: calc(var(--spacing) * 2);
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
@@ -318,95 +192,17 @@
     --tw-tracking: var(--tracking-wider);
     letter-spacing: var(--tracking-wider);
   }
-  .text-green-500 {
-    color: var(--color-green-500);
-  }
-  .text-pink-50 {
-    color: var(--color-pink-50);
-  }
-  .text-pink-500 {
-    color: var(--color-pink-500);
-  }
   .text-rose-500 {
     color: var(--color-rose-500);
   }
-  .text-sky-50 {
-    color: var(--color-sky-50);
-  }
-  .text-sky-300 {
-    color: var(--color-sky-300);
-  }
   .text-sky-500 {
     color: var(--color-sky-500);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
   }
   .underline-offset-2 {
     text-underline-offset: 2px;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .selection\:bg-emerald-600 {
-    & *::selection {
-      background-color: var(--color-emerald-600);
-    }
-    &::selection {
-      background-color: var(--color-emerald-600);
-    }
-  }
-  .selection\:bg-green-500 {
-    & *::selection {
-      background-color: var(--color-green-500);
-    }
-    &::selection {
-      background-color: var(--color-green-500);
-    }
-  }
-  .selection\:bg-green-600 {
-    & *::selection {
-      background-color: var(--color-green-600);
-    }
-    &::selection {
-      background-color: var(--color-green-600);
-    }
-  }
-  .selection\:bg-pink-300 {
-    & *::selection {
-      background-color: var(--color-pink-300);
-    }
-    &::selection {
-      background-color: var(--color-pink-300);
-    }
-  }
-  .selection\:bg-pink-600 {
-    & *::selection {
-      background-color: var(--color-pink-600);
-    }
-    &::selection {
-      background-color: var(--color-pink-600);
-    }
-  }
-  .selection\:bg-rose-300 {
-    & *::selection {
-      background-color: var(--color-rose-300);
-    }
-    &::selection {
-      background-color: var(--color-rose-300);
-    }
-  }
-  .selection\:bg-rose-600 {
-    & *::selection {
-      background-color: var(--color-rose-600);
-    }
-    &::selection {
-      background-color: var(--color-rose-600);
-    }
   }
   .selection\:bg-sky-300 {
     & *::selection {
@@ -416,25 +212,6 @@
       background-color: var(--color-sky-300);
     }
   }
-  .hover\:scale-105 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 105%;
-        --tw-scale-y: 105%;
-        --tw-scale-z: 105%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -443,24 +220,4 @@
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
 }
