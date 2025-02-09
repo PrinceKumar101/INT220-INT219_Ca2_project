@@ -39,4 +39,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/public/assets/css/output.css
+output.css
+public/assets/css/output.css
+
+/vendor/
