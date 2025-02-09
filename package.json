@@ -4,14 +4,25 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predev":"rm -f ./public/assets/css/output.css",
     "dev": "npx @tailwindcss/cli -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.3",
-    "tailwindcss": "^4.0.3"
+    "@tailwindcss/cli": "^4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceKumar101/ca2_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PrinceKumar101/ca2_project/issues"
+  },
+  "homepage": "https://github.com/PrinceKumar101/ca2_project#readme",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.0.5"
   }
 }
