@@ -1,13 +1,15 @@
 <?php
+// $content = isset($_GET['page']) ? $_GET['page'] . '.php' : 'home.php';
+// if (!file_exists($content)) {
+//     $content = '404.php'; 
+// }
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
-$dotenv->load();
-
-$name = $_ENV["NAME"];
+$allowed_pages = ['home', 'about', 'contact','login','dashboard']; // Add valid page names
+$page = isset($_GET['page']) && in_array($_GET['page'], $allowed_pages) ? $_GET['page'] : 'home';
+$content = "./$page.php";
+if (!file_exists($content)) {
+    $content = '404.php';
+}
 
 ?>
 
@@ -19,17 +21,25 @@ $name = $_ENV["NAME"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./assets/css/output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
 
 </head>
 
 <body>
-    <p class=" text-5xl/loose font-semibold underline-offset-2 text-rose-500 underline text-center pt-13 selection:bg-sky-300 tracking-wider ">Testing Tailwind CSS. <br> Try using Tailwind. <br>
-<span class="text-sky-500 underline underline-bg-sky-500 ">
-<?php 
-echo isset($name)?$name:"You need to setup a .env file to access this data <br> Try copying env.txt after creating a .env file. " ?>
-</span>    
+    <!-- Navbar -->
+    <div>
+        <?php include './navbar.php'; ?>
+    </div>
 
-</p>
+    <!-- Main Content -->
+    <div>
+        <?php include $content; ?>
+    </div>
+
+    <!-- Footer -->
+    <div>
+        <?php include './footer.php'; ?>
+    </div>
 </body>
 
 </html>
