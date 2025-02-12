@@ -1,18 +1,22 @@
 <Script>
-    function alerting_user(){
-        alert("Download feature not available yet.");
+    function alerting_user() {
+        alert("Download feature not available yet. I am sorry");
     }
 </Script>
+<h1 class="text-3xl bg-gradient-to-br from-slate-800 to-slate-900 p-8 text-center text-white/50  ">
+    <?php
+    echo "Hii there $name How are you doing today?";
+    ?>
+</h1>
 <div class="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900 p-8 flex items-center justify-center ">
+
     <div class="bg-black/30 backdrop-blur-xl rounded-3xl p-8 w-full max-w-6xl text-white">
         <div class="flex gap-8">
-            <!-- Left Panel -->
             <div class="w-72 space-y-6">
                 <div class="flex items-center justify-between">
                     <h1 class="text-2xl font-light">WeatherWise</h1>
                 </div>
 
-                <!-- Status Card -->
                 <div class="bg-black/20 rounded-2xl p-4 space-y-4">
                     <div class="flex justify-between items-center">
                         <span class="text-gray-400">Status</span>
@@ -29,7 +33,6 @@
                     </button>
                 </div>
 
-                <!-- Globe Section -->
                 <div>
                     <h3 class="text-sm text-gray-400 mb-4">Select Area</h3>
                     <div class="bg-black/20 rounded-2xl p-4 aspect-square flex items-center justify-center">
@@ -39,10 +42,8 @@
                 </div>
             </div>
 
-            <!-- Main Content -->
             <div class="flex-1 space-y-6">
                 <div class="flex justify-between items-start">
-                    <!-- Location and Temperature -->
                     <div>
                         <div class="flex items-center gap-2 text-gray-300 mb-4">
                             <span>Brooklyn, New York, USA</span>
@@ -63,25 +64,14 @@
                         </div>
                     </div>
 
-                    <!-- Search and Download -->
-                    <div class="flex gap-4">
-                        <button class="p-3 bg-gray-700/30 rounded-full">
-                            <i class="lucide-search w-5 h-5"></i>
-                        </button>
-                        <button onclick="alerting_user()" class="px-4 py-2 bg-white text-gray-900 rounded-full flex items-center gap-2">
-                            <i class="lucide-download w-4 h-4"></i>
-                            Download App
-                        </button>
-                    </div>
+
                 </div>
 
-                <!-- Weather Description -->
                 <div>
                     <h2 class="text-5xl font-light text-gray-400">Stormy</h2>
                     <p class="text-3xl font-light text-gray-500">with partly cloudy</p>
                 </div>
 
-                <!-- Weekly Forecast -->
                 <div class="mt-12">
                     <div class="flex justify-between items-end relative">
                         <div class="text-center">
@@ -113,7 +103,6 @@
                     </div>
                 </div>
 
-                <!-- Recently Searched -->
                 <div class="mt-8">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-gray-400">Recently Searched</span>
