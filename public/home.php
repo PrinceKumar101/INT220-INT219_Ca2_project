@@ -3,12 +3,13 @@
         alert("Download feature not available yet. I am sorry");
     }
 </Script>
+<div class="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col w-full">
 <h1 class="text-3xl bg-gradient-to-br from-slate-800 to-slate-900 p-8 text-center text-white/50  ">
     <?php
     echo "Hii there $name How are you doing today?";
     ?>
 </h1>
-<div class="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900 p-8 flex items-center justify-center ">
+<div class="min-h-screen bg-gradient-to-br from-slate-800 to-slate-900 p-8 flex justify-center ">
 
     <div class="bg-black/30 backdrop-blur-xl rounded-3xl p-8 w-full max-w-6xl text-white">
         <div class="flex gap-8">
@@ -132,4 +133,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
