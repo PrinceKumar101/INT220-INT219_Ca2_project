@@ -17,15 +17,15 @@ $name = $_ENV['NAME'];
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
 </head>
 
-<body class=" min-h-screen flex flex-col">
+<body class=" min-h-screen flex flex-col m-0 p-0 bg-gradient-to-br from-blue-50 to-blue-100 text-black">
 
     <!-- Navbar -->
-    <header class="bg-white shadow-md py-4">
+    <header class="shadow-md sticky top-0 z-10 bg-inhert text-inhert opacity-95 backdrop-blur-2xl ">
             <?php include './navbar.php'; ?>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow flex items-center justify-center">
+    <main class="flex-grow flex-col items-center justify-center ">
             <?php include $content; ?>
     </main>
 

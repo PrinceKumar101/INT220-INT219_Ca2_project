@@ -10,9 +10,10 @@
         alertBox.classList.add("hidden"); // Hide after 1 sec
     }, 5000);
 </script>
-<div class="text-3xl text-center">
+<div class="text-3xl text-center dark-theme">
 
-    <p>
+    <p class="">
         This is a Login page.
     </p>
 </div>
+
