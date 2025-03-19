@@ -1,5 +1,5 @@
 <?php
-include_once "../backend/includes/header.php";
+// include_once "../backend/includes/header.php";
 $api_key = $_ENV['WEATHER_API'] ?? null;
 
 if (!$api_key) {

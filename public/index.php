@@ -30,7 +30,7 @@ $name = $_ENV['NAME'];
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center py-4 mt-8">
+    <footer class=" text-black text-center">
             <?php include './footer.php'; ?>
     </footer>
 

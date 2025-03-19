@@ -1,9 +1,9 @@
 <?php
 $nav_links = ["Home" => "home", "About" => "about", "Dashboard" => "dashboard", "Contact" => "contact", "Sign In" => "login"];
 ?>
-<nav class="bg-inhert text-inhert text-xl">
+<nav class="bg-inhert text-inhert text-lg">
     <div class="flex items-center justify-between p-4">
-        <a href="#" class="text-2xl font-bold ml-10">Brand</a>
+        <a href="#" class="text-3xl font-bold ml-10">Brand</a>
 
         <button class="md:hidden burger text-white focus:outline-none">
             ☰
