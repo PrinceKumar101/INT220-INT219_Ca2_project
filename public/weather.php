@@ -5,12 +5,9 @@ include_once "../backend/weather_curl.php";
 <div>
 
 
-    <div class="bg-inhert flex flex-col  w-full text-2xl h-fit p-10">
-        <h1 class="text-3xl  p-8 text-center text-blue-600">
-            Hi there, How are you doing today <?= $_ENV["NAME"] ?? "No name Person" ?>
-        </h1>
+    <div class="bg-inhert flex flex-col w-full text-2xl h-fit p-5">
         <div class=" bg-inhert p-4 md:p-8 flex justify-center">
-            <div class="bg-[url(https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D)] bg-no-repeat bg-center bg-cover rounded-3xl p-6 md:p-8 w-full max-w-6xl text-gray-700 relative overflow-hidden">
+            <div class="bg-[url(https://images.unsplash.com/photo-1531604250646-2f0e818c4f06?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D)] bg-no-repeat bg-center bg-cover rounded-3xl p-4 md:p-5 w-full max-w-6xl text-gray-700 relative overflow-hidden">
                 <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
                 <div class="relative flex flex-col-reverse md:flex-row gap-6 md:gap-8">
                     <div class="w-full md:w-72 space-y-6">
