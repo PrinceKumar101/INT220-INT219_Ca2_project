@@ -1,5 +1,7 @@
 <?php
-$nav_links = ["Home" => "home", "About" => "about", "Dashboard" => "dashboard", "Contact" => "contact", "Sign In" => "login"];
+$nav_links = ["Home" => "home", "About" => "about", "Weather"=>"weather", "Contact" => "contact", "Sign In" => "login"];
+$logged_in = true;
+$nav_links_iflogged = ["Farming Advisory" => "farming_advisory","Dashboard" => "dashboard" ,"Logout" => "logout"]
 ?>
 <nav class="bg-inhert text-inhert text-lg">
     <div class="flex items-center justify-between p-4">
@@ -15,8 +17,8 @@ $nav_links = ["Home" => "home", "About" => "about", "Dashboard" => "dashboard", 
 
             foreach ($nav_links as $items => $items_link) {
                 echo "
-                <li class='hover:scale-105 rounded-lg'>
-                    <div class='relative p-1 rounded '>
+                <li class='hover:scale-105 rounded-lg " . (($page == $items_link) ? 'bg-gradient-to-b from-2% via-15% to-40% from-white via-white/90 to-transparent' : '') . " '>
+                    <div class='relative p-1 rounded bg-transparent backdrop:blur-2xl'>
                         <a href='?page=$items_link' class='hover:text-gray-400 capitalize hover:duration-300 " . (($page == $items_link) ? 'text-rose-500 p-1 hover:scale-105 hover:text-rose-500 underline underline-offset-6' : '') . "'>
                             <span class='absolute inset-0'></span>
                             $items
