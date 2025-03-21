@@ -41,6 +41,3 @@ next-env.d.ts
 
 /vendor/
 public/assets/css/output.css
-./public/assets/css/output.css
-output.css
-/output.css
