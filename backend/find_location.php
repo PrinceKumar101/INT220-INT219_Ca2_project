@@ -3,20 +3,6 @@ session_start();
 include_once "./includes/header.php";
 
 
-// $city = "Phagwara,Punjab,India"; // Corrected city name
-// $city = trim($city);
-if (isset($_POST["city"]) && !empty($_POST["city"])) {
-    location($_POST["city"]);
-    header("Location: ../public/index.php",true,301);
-}
-if (isset($_POST["latitude"]) && isset($_POST["longitude"]) && !empty($_POST["latitude"]) && !empty($_POST["longitude"])) {
-    $_SESSION["lati"] = $_POST["latitude"];
-    $_SESSION["longi"] = $_POST["longitude"];
-    header("Location: ../public/index.php");
-    exit();
-}
-
-
 function location($city)
 {
     $city = trim($city);
@@ -46,7 +32,18 @@ function location($city)
     if (empty($res) || !isset($res[0]["lat"], $res[0]["lon"])) {
         die("Invalid location data received.");
     }
-    session_start();
     $_SESSION["lati"] = $res[0]["lat"];
     $_SESSION["longi"] = $res[0]["lon"];
+}
+
+
+if (isset($_POST["city"]) && !empty($_POST["city"])) {
+    location($_POST["city"]);
+    header("Location: ../public/index.php?page=weather", true, 301);
+}
+if (isset($_POST["latitude"]) && isset($_POST["longitude"]) && !empty($_POST["latitude"]) && !empty($_POST["longitude"])) {
+    $_SESSION["lati"] = $_POST["latitude"];
+    $_SESSION["longi"] = $_POST["longitude"];
+    header("Location: ../public/index.php?page=weather", true, 301);
+    exit();
 }
