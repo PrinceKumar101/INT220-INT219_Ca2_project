@@ -17,20 +17,20 @@ $name = $_ENV['NAME'];
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script> 
 </head>
 
-<body class=" min-h-screen flex flex-col">
+<body class=" min-h-screen flex flex-col m-0 p-0 bg-gradient-to-br from-sky-100/30 to-sky-200/50 text-black">
 
     <!-- Navbar -->
-    <header class="bg-white shadow-md py-4">
+    <header class="shadow-md sticky top-0 z-10 bg-inhert text-inhert opacity-95 backdrop-blur-2xl ">
             <?php include './navbar.php'; ?>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow flex items-center justify-center">
+    <main class="flex-grow flex-col items-center justify-center ">
             <?php include $content; ?>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white text-center py-4 mt-8">
+    <footer class=" text-black text-center">
             <?php include './footer.php'; ?>
     </footer>
 

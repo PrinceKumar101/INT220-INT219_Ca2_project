@@ -1,19 +1,37 @@
-
-<nav class="bg-gray-800 text-white">
-    <div class="container mx-auto flex items-center justify-between p-4">
-        <a href="#" class="text-xl font-bold">Brand</a>
+<?php
+$nav_links = ["Home" => "home", "About" => "about", "Weather"=>"weather", "Contact" => "contact", "Sign In" => "login"];
+$logged_in = true;
+$nav_links_iflogged = ["Farming Advisory" => "farming_advisory","Dashboard" => "dashboard" ,"Logout" => "logout"]
+?>
+<nav class="bg-inhert text-inhert text-lg">
+    <div class="flex items-center justify-between p-4">
+        <a href="#" class="text-3xl font-bold ml-10">Brand</a>
 
         <button class="md:hidden burger text-white focus:outline-none">
             ☰
         </button>
 
-        <ul class="hidden md:flex space-x-4 menu">
-            <li><a href="?page=home" class="hover:text-gray-300 <?= ($page == 'home') ? 'text-rose-500 scale-105 p-2 hover:scale-105 hover:text-rose-500' : ''; ?>">Home</a></li>
-            <li><a href="?page=about" class="hover:text-gray-300 <?= ($page == 'about') ? 'text-rose-500 scale-105 p-2 hover:scale-105 hover:text-rose-500' : ''; ?>">About</a></li>
-            <li><a href="?page=dashboard" class="hover:text-gray-300 <?= ($page == 'dashboard') ? 'text-rose-500 scale-105 p-2 hover:scale-105 hover:text-rose-500' : ''; ?>">Dashboard</a></li>
-            <li><a href="?page=contact" class="hover:text-gray-300 <?= ($page == 'contact') ? 'text-rose-500 scale-105 p-2 hover:scale-105 hover:text-rose-500' : ''; ?>">Contact</a></li>
-            <li><a href="?page=login" class="hover:text-gray-300 <?= ($page == 'login') ? 'text-rose-500 scale-105 p-2 hover:scale-105 hover:text-rose-500' : ''; ?>">Login</a></li>
+        <ul class="hidden md:flex md:space-x-4 gap-3 menu">
+
+            <?php
+
+            foreach ($nav_links as $items => $items_link) {
+                echo "
+                <li class='hover:scale-105 rounded-lg " . (($page == $items_link) ? 'bg-gradient-to-b from-2% via-15% to-40% from-white via-white/90 to-transparent' : '') . " '>
+                    <div class='relative p-1 rounded bg-transparent backdrop:blur-2xl'>
+                        <a href='?page=$items_link' class='hover:text-gray-400 capitalize hover:duration-300 " . (($page == $items_link) ? 'text-rose-500 p-1 hover:scale-105 hover:text-rose-500 underline underline-offset-6' : '') . "'>
+                            <span class='absolute inset-0'></span>
+                            $items
+                            </a>
+                        </div>
+                    
+                </li>
+                ";
+            }
+
+            ?>
         </ul>
+
     </div>
 </nav>
 <script>
@@ -26,7 +44,6 @@
             menu.classList.toggle('hidden');
         });
 
-        
+
     });
 </script>
-

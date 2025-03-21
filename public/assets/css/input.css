@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+:root{
+    --text-color:var(--color-black)
+}
+
