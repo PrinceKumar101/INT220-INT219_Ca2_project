@@ -36,15 +36,15 @@
             <circle cx="150" cy="100" r="5" fill="#0ea5e9" />
           </svg>
           <div class="md:text-left md:ml-4 mt-4 md:mt-0">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-sky-700 mb-2">Page Not Found</h1>
-            <p class="text-md sm:text-lg text-sky-600 mb-6 sm:mb-8">Sorry, we couldn't find the page you're looking for.</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-700 mb-2">Page Not Found</h1>
+            <p class="text-md sm:text-lg text-orange-600 mb-6 sm:mb-8">Sorry, we couldn't find the page you're looking for.</p>
           </div>
         </div>
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 px-4">
-          <button id="goBack" class="px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-medium rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400 w-full sm:w-auto">
+          <button id="goBack" class="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400 w-full sm:w-auto">
             Go Back
           </button>
-          <a href="./index.php" class="px-6 py-3 bg-white border border-sky-300 hover:bg-sky-50 text-sky-600 font-medium rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400 w-full sm:w-auto flex items-center justify-center">
+          <a href="./index.php" class="px-6 py-3 bg-white border border-orange-300 hover:bg-orange-50 text-orange-600 font-medium rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400 w-full sm:w-auto flex items-center justify-center">
             Go Home
           </a>
         </div>
