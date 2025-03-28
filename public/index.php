@@ -1,6 +1,7 @@
 <?php
 
 require_once '../backend/includes/header.php';
+require_once '../backend/includes/utility_function.php';
 
 
 $name = $_ENV['NAME'];

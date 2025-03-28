@@ -14,31 +14,23 @@ This is a email sent you for resting your password.
 </h1>
 <p>
 click on the below link to visit required page.</p>
-<a href='http://localhost/ca2_project/public/index.php?page=login'  class='text-sky-500 underline underline-offset-2'> Reset Password</a>
+<a href='http://localhost/ca2_project/public/index.php?page=reset_password'  class='text-sky-500 underline underline-offset-2'> Reset Password</a>
 </div>";
 
-function goto_forgot_page($location)
-{
-    header("location: $location", true, 301);
-    exit;
+
+$email = isset($_POST["email"]) ? filter_var($_POST["email"], FILTER_SANITIZE_EMAIL) : null;
+
+if (!check_if_email_exists($email, $conn)) {
+    $_SESSION["forgot_password_error"] = ["error" => "Email not found please verify."];
+    go_to_location_with_exit($forgot_page_location);
 }
 
-$email = isset($_POST["email"])? filter_var($_POST["email"],FILTER_SANITIZE_EMAIL):null;
+$email_sent = send_email($_ENV["EMAIL_USERNAME"], $_ENV["EMAIL_PASSWORD"], $_ENV["EMAIL_FROM"], $_ENV["EMAIL_SENDER_NAME"], $email, $email_header, $email_body);
 
-if(!check_if_email_exists($email,$conn)){
-    $_SESSION["forgot_password_error"] = ["error"=>"Email not found please verify."];
-    goto_forgot_page($forgot_page_location);
+if ($email_sent) {
+    $_SESSION["forgot_password_success"] = ["success" => "Email sent successfully <br> Check you inbox."];
+    $_SESSION["email_for_password_reset"] = $email;
+} else {
+    $_SESSION["forgot_password_error"] = ["error" => "Couldn't send email <br> please verify email and try again after some time."];
 }
-
-$email_sent = send_email($_ENV["EMAIL_USERNAME"],$_ENV["EMAIL_PASSWORD"],$_ENV["EMAIL_FROM"],$_ENV["EMAIL_SENDER_NAME"],$email, $email_header,$email_body);
-
-if($email_sent){
-    $_SESSION["forgot_password_success"] = ["success"=>"Email sent successfully <br> Check you inbox."];
-    goto_forgot_page($forgot_page_location);
-}else{
-    $_SESSION["forgot_password_error"] = ["error"=>"Couldn't send email <br> please verify email and try again after some time."];
-    goto_forgot_page($forgot_page_location);
-}
-
-
-?>
+go_to_location_with_exit($forgot_page_location);

@@ -5,18 +5,7 @@ $error_key = $error ? array_key_first($error) : null;
 $error_message = $error_key ? $error[$error_key] : null;
 $success = $_SESSION['signup_success'] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
-function display_signup_error($err)
-{
 
-    echo "<div class='text-lg text-red-500'><p>$err</p></div>";
-    unset($_SESSION["signup_error"]);
-}
-function display_signup_success($success)
-{
-
-    echo "<div class='text-xl text-sky-500'><p>$success</p></div>";
-    unset($_SESSION["signup_success"]);
-}
 ?>
 
 <div class="min-h-screen flex items-center justify-center px-4 -mt-5">
@@ -58,10 +47,10 @@ function display_signup_success($success)
 
             <?php
             if (!empty($error)) {
-                display_signup_error($error_message);
+                display_error_message($error_message, "signup_error");
             }
             if (!empty($success)) {
-                display_signup_success($success_message);
+                display_success_message($success_message, "signup_success");
             }
             ?>
 

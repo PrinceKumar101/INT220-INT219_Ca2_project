@@ -5,18 +5,7 @@ $error_key = $error ? array_key_first($error) : null;
 $error_message = $error_key ? $error[$error_key] : null;
 $success = $_SESSION['login_success'] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
-function display_login_error($err)
-{
 
-    echo "<div class='text-lg text-red-500'><p>$err</p></div>";
-    unset($_SESSION["login_error"]);
-}
-function display_login_success($success)
-{
-
-    echo "<div class='text-xl text-sky-500'><p>$success</p></div>";
-    unset($_SESSION["login_success"]);
-}
 ?>
 <div class="min-h-screen flex items-center justify-center px-4 -mt-5">
     <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
@@ -43,10 +32,10 @@ function display_login_success($success)
             </div>
             <?php
             if (!empty($error)) {
-                display_login_error($error_message);
+                display_error_message($error_message,"login_error");
             }
             if (!empty($success)) {
-                display_login_success($success_message);
+                display_success_message($success_message,"login_success");
             }
             ?>
             <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md hover:scale-105 transition-all">

@@ -1,3 +1,14 @@
+<?php
+$error = isset($_SESSION["reset_password_error"]) ? $_SESSION["reset_password_error"] : null;
+$success = isset($_SESSION["reset_password_success"]) ? $_SESSION["reset_password_success"] : null;
+
+$error_message = $error ? $error[array_key_first($error)] : null;
+$success_message = $success ? $success[array_key_first($success)] : null;
+
+
+
+?>
+
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <form action="../backend/auth/reset_password.php" method="post" class="bg-white p-6 rounded-lg shadow-lg w-80">
         <h1 class="text-2xl font-bold text-orange-500 text-center mb-4">
@@ -17,5 +28,14 @@
             class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
             Reset Password
         </button>
+
+        <?php
+        if (!empty($error)) {
+            display_error_message($error_message, "reset_password_error");
+        }
+        if (!empty($success)) {
+            display_success_message($success_message, "reset_password_success");
+        }
+        ?>
     </form>
 </div>
