@@ -52,7 +52,7 @@ include_once "../backend/weather_curl.php";
                                     class=" w-7/10 md:w-full p-1.5 md:p-2 rounded-md bg-white border border-gray-300 text-gray-800 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none">
                             </section>
                             <button type="submit"
-                                class="bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600 transition">
+                                class="bg-green-500 text-white px-3 py-2 rounded-md hover:bg-green-600 transition">
                                 Submit
                             </button>
                         </form>
