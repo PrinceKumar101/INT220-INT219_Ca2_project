@@ -8,35 +8,35 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
 ?>
 
-<div class="min-h-screen flex items-center justify-center px-4 -mt-5">
+<div class="min-h-screen flex items-center justify-center px-4 -mt-5 [--primary-color:var(--color-orange-500)] [--primary-button-color:var(--color-orange-600)] [--primary-text-color:var(--color-black)]">
     <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row-reverse items-center gap-8 w-full max-w-4xl">
         <!-- Form Section -->
         <form action="../backend/auth/signup.php" method="post" class="flex flex-col gap-6 w-full md:w-1/2">
-            <h1 class="text-4xl font-bold text-orange-500 text-center">Signup</h1>
+            <h1 class="text-4xl font-bold text-(--primary-color) text-center">Signup</h1>
 
             <div class="flex flex-col gap-2">
-                <label for="name" class="text-black font-medium">Name</label>
+                <label for="name" class="text-(--primary-text-color) font-medium">Name</label>
                 <input type="text" placeholder="Dark Shadow" name="name" required
-                    class="bg-orange-100 text-black rounded p-2 border border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all">
+                    class="bg-orange-100 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all">
             </div>
             <div class="flex flex-col gap-2">
-                <label for="email" class="text-black font-medium">Email</label>
+                <label for="email" class="text-(--primary-text-color) font-medium">Email</label>
                 <input type="email" placeholder="MrDark@gmail.com" name="email" required
-                    class="bg-orange-100 text-black rounded p-2 border border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all">
+                    class="bg-orange-100 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all">
             </div>
             <div class="flex flex-col gap-2">
-                <label for="role" class="text-black font-medium">Signup As</label>
-                <select id="role" name="role" class="bg-orange-100 text-black rounded p-2 border border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all">
+                <label for="role" class="text-(--primary-text-color) font-medium">Signup As</label>
+                <select id="role" name="role" class="bg-orange-100 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all">
                     <option value="farmer">Farmer</option>
                     <option value="expert">Expert</option>
                 </select>
             </div>
 
             <div class="flex flex-col gap-2">
-                <label for="password" class="text-black font-medium">Password</label>
-                <div class="flex items-center gap-2 border border-orange-500 rounded bg-orange-100 p-2 focus-within:ring-2 focus-within:ring-orange-500">
+                <label for="password" class="text-(--primary-text-color) font-medium">Password</label>
+                <div class="flex items-center gap-2 border border-(--primary-color) rounded bg-orange-100 p-2 focus-within:ring-2 focus-within:ring-(--primary-color)">
                     <input id="Signup_password" type="password" placeholder="••••••••" name="password" required
-                        class="bg-transparent flex-1 text-black focus:outline-none">
+                        class="bg-transparent flex-1 text-(--primary-text-color) focus:outline-none">
                     <img src="./assets/images/eye_icon_close.png" alt="Show Password" id="eye_img" class="h-6 w-6 cursor-pointer" onclick="handle_password_visiblity('Signup_password','eye_img')">
                 </div>
             </div>
@@ -54,7 +54,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
             }
             ?>
 
-            <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md hover:scale-105 transition-all">
+            <button class="bg-(--primary-color) hover:bg-(--primary-button-color) text-white font-semibold py-2 rounded-md hover:scale-105 transition-all">
                 Signup
             </button>
             <div class="flex text-md gap-2 group relative">
