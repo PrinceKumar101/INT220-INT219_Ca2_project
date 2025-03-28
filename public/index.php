@@ -19,7 +19,7 @@ $name = $_ENV['NAME'];
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body class=" min-h-screen flex flex-col m-0 p-0 bg-zinc-100 text-black selection:bg-orange-500 selection:text-white">
+<body class=" min-h-screen flex flex-col m-0 p-0 bg-zinc-100 text-black selection:bg-green-500 selection:text-white">
 
         <!-- Navbar -->
         <header class="shadow-md sticky top-0 z-50 bg-inhert text-inhert opacity-95 backdrop-blur-2xl ">

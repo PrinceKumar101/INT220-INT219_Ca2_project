@@ -7,7 +7,7 @@ $success_message = $success? $success[array_key_first($success)]:null;
 
 ?>
 
-<div class="flex items-center justify-center min-h-screen [--primary-color:var(--color-orange-500)] [--primary-text-color:var(--color-black)] [--primary-button-color:var(--color-orange-600)]">
+<div class="flex items-center justify-center min-h-screen [--primary-color:var(--color-green-500)] [--primary-text-color:var(--color-black)] [--primary-button-color:var(--color-green-600)]">
     <form action="../backend/auth/forgot_password.php" method="post" class="bg-white p-6 rounded-lg shadow-lg w-80">
         <h1 class="text-2xl font-bold text-(--primary-color) text-center mb-4">
             Forgot Password
@@ -15,7 +15,7 @@ $success_message = $success? $success[array_key_first($success)]:null;
         <section class="mb-4">
             <label for="email" class="block text-(--primary-text-color) font-medium mb-1">Email</label>
             <input type="email" placeholder="jhon@example.com" id="email" name="email"
-                class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-(--primary-color)">
+                class="w-full px-3 bg-(--primary-color)/10 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-(--primary-color)">
         </section>  
         <?php
             if(!empty($error)) display_error_message($error_message,"forgot_password_error");
