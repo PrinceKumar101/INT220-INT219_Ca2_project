@@ -7,7 +7,7 @@ $success = $_SESSION['login_success'] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
 
 ?>
-<div class="min-h-screen flex items-center justify-center px-4 -mt-5 [--primary-color:var(--color-orange-500)] [--primary-button-color:var(--color-orange-600)] [--primary-text-color:var(--color-black)]">
+<div class="min-h-screen flex items-center justify-center px-4 -mt-5 [--primary-color:var(--color-green-500)] [--primary-button-color:var(--color-green-600)] [--primary-text-color:var(--color-black)]">
     <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
         <!-- Form Section -->
         <form action="../backend/auth/login.php" method="post" class="flex flex-col gap-6 w-full md:w-1/2">
@@ -16,12 +16,12 @@ $success_message = $success ? $success[array_key_first($success)] : null;
             <div class="flex flex-col gap-2">
                 <label for="email" class="text-(--primary-text-color) font-medium">Email</label>
                 <input type="email" name="email" placeholder="MrDark@gmail.com"
-                    class="bg-orange-100 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all focus:duration-350">
+                    class="bg-(--primary-color)/5 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all focus:duration-350">
             </div>
 
             <div class="flex flex-col gap-2">
                 <label for="password" class="text-(--primary-text-color) font-medium">Password</label>
-                <div class="flex items-center gap-2 border border-(--primary-color) rounded bg-orange-100 p-2 focus-within:ring-2 focus-within:ring-(--primary-color) focus-within:duration-350">
+                <div class="flex items-center gap-2 border border-(--primary-color) rounded bg-(--primary-color)/5 p-2 focus-within:ring-2 focus-within:ring-(--primary-color) focus-within:duration-350">
                     <input id="login_password" type="password" placeholder="••••••••" name="password"
                         class="bg-transparent flex-1 text-(--primary-text-color) focus:outline-none">
                     <img src="./assets/images/eye_icon_close.png" alt="Show Password" id="eye_img" class="h-6 w-6 cursor-pointer" onclick="handle_password_visiblity('login_password','eye_img')">
