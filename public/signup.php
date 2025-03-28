@@ -1,5 +1,4 @@
 <?php
-
 $error = $_SESSION["signup_error"] ?? null;
 $error_key = $error ? array_key_first($error) : null;
 $error_message = $error_key ? $error[$error_key] : null;

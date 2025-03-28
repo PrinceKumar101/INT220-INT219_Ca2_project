@@ -1,5 +1,4 @@
 <?php
-// include '../includes/header.php';
 
 $db_name = $_ENV["DB_NAME"] ?? null;
 $db_host = $_ENV["DB_HOST"] ?? null;
@@ -16,15 +15,3 @@ if ($conn->connect_error) {
     echo json_encode(["success" => false, "message" => "DB connection failed"]);
     die();
 }
-// var_dump($conn);
-// echo "<br>";
-// $que = "select * from users;";
-
-
-// $all_users = mysqli_query($conn, $que,);
-// if ($all_users) {
-
-//     $rows = mysqli_fetch_all($all_users);
-//     var_dump($rows);
-// }
-// var_dump($all_users);
