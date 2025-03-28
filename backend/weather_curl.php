@@ -1,6 +1,5 @@
 <?php
 // include_once "../backend/includes/header.php";
-// session_start();
 $api_key = $_ENV['WEATHER_API'] ?? null;
 
 if (!$api_key) {
@@ -10,7 +9,7 @@ if (!$api_key) {
 }
 
 
-
+session_start();
 $lat = $_SESSION["lati"]?? 25.6093239;
 $lon = $_SESSION["longi"]?? 85.1235252;
 
@@ -18,6 +17,7 @@ $ch = curl_init();
 $options = [
     CURLOPT_URL => "https://api.openweathermap.org/data/2.5/forecast/daily?lat=$lat&lon=$lon&cnt=7&appid=$api_key&units=metric",
     CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 1000,
 ];
 
 curl_setopt_array($ch, $options);
