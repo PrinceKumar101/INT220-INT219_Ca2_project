@@ -49,7 +49,6 @@ $name = $_ENV['NAME'];
         </footer>
 
 
-
 </body>
 
 </html>

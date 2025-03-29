@@ -58,13 +58,13 @@ function reset_password($email, $password, $conn)
 function display_error_message($err, $session_name)
 {
 
-    echo "<div class='text-lg text-red-500 p-2'><p>$err</p></div>";
+    echo "<div class='text-xl font-semibold tracking-wider w-full text-center text-red-500 p-2'><p>$err</p></div>";
     unset($_SESSION[$session_name]);
 }
 function display_success_message($success, $session_name)
 {
 
-    echo "<div class='text-xl text-sky-500 p-2'><p>$success</p></div>";
+    echo "<div class='text-xl font-semibold tracking-wider w-full text-center text-sky-500 p-2'><p>$success</p></div>";
     unset($_SESSION[$session_name]);
 }
 
@@ -78,13 +78,29 @@ function go_to_location($location)
     header("location: $location", true, 301);
 }
 
-// function isLoggedIn_display($isLoggedin,$user_id,$conn){
-//     if($isLoggedin) "<div></div>";
-//     $query = "select name,email,role from users where user_id='$user_id';";
-//     $result = mysqli_query($conn, $query);
-//     if(!$result) exit;
-//     $rows = mysqli_fetch_all($result);
-//     var_dump($rows);
+function find_loggedin_user($isLoggedin, $user_id, $conn)
+{
+    if (!$isLoggedin){
+        $_SESSION["user"] = ["status"=>false];
+        return;
+    }
 
-// }
-// isLoggedIn_display($true,16,$conn);
+    $query = "select name,email,role from users where user_id='$user_id';";
+    $result = mysqli_query($conn, $query);
+    if (!$result){
+        $_SESSION["user"] = ["status"=>false];
+        return;
+    }
+    $user = mysqli_fetch_assoc($result);
+    if (!$user){
+        $_SESSION["user"] = ["status"=>false];
+        return;
+    }
+    $_SESSION["user"] = ["status"=>true,"name" => $user["name"], "email" => $user["email"], "role" => $user["role"]];
+}
+function logout_user($isloggedIn, $user_details){
+    if($_SESSION["$isloggedIn"]) unset($_SESSION[$isloggedIn]);
+    if($_SESSION["$user_details"]) unset($_SESSION[$user_details]);
+
+    return true;
+}

@@ -5,6 +5,7 @@ include_once "../database/db_connect.php";
 // session_start();
 
 $login_page_location =  "../../public/index.php?page=login";
+$home_page_location = "../../public/index.php?page=home";
 
 
 
@@ -31,9 +32,14 @@ $matched = compare_password($password, $conn, $temp_user_id);
 
 if ($matched) {
     $_SESSION["login_success"] = ["success" => "Login successfull."];
-    $_SESSION["User_id"] = $temp_user_id;
+    $_SESSION["loggedIn"] = ["status"=>true, "user_id" => $temp_user_id];
+    if($_SESSION["loggedIn"]["status"]){
+        find_loggedin_user($_SESSION["loggedIn"]["status"],$_SESSION["loggedIn"]["user_id"],$conn);
+    }
+    go_to_location_with_exit($home_page_location);
 } else {
     $_SESSION["login_error"] = ["password" => "Email or password not matched."];
+    go_to_location_with_exit($login_page_location);
 }
-go_to_location_with_exit($login_page_location);
+
 
