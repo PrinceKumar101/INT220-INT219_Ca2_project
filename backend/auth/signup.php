@@ -4,6 +4,7 @@ include_once "../includes/utility_function.php";
 include_once "../database/db_connect.php";
 
 $signup_page_location =  "../../public/index.php?page=signup";
+$home_page_location =  "../../public/index.php?page=home";
 
 
 function santize_html($data)

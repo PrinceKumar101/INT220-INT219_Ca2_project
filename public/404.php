@@ -31,7 +31,7 @@
 </style>
 
 <div>
-  <div class="bg-transparent backdrop-blur-2xl w-full overflow-hidden [--primary-color:var(--color-pink-500)] [--primary-text-color:var(--color-white)]">
+  <div class="bg-transparent backdrop-blur-2xl w-full overflow-hidden [--primary-color:var(--color-green-500)] [--primary-text-color:var(--color-white)]">
     <div class="flex items-center justify-center min-h-screen px-4 py-8">
       <div class="text-center rounded-xl bg-white bg-opacity-40 backdrop-filter backdrop-blur-sm w-full max-w-4xl mx-auto p-1 sm:p-8">
         <div class="flex flex-col md:flex-row justify-center items-center mb-6 md:mb-12">
