@@ -1,4 +1,4 @@
-<?php
+ <?php
 $error =  $_SESSION["logout_error"] ?? null;
 $error_message = $error ? $error[array_key_first($error)] : null;
 $success = $_SESSION["logout_success"] ?? null;
@@ -276,7 +276,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
             <h1 class="inline-block text-black text-7xl text-center" style="-webkit-text-stroke: 3px white;">User Feedback</h1>
 
         </div>
-        <p class="text-center text-gray-400 font-bold text-xl pb-8">Hear from our amazing users and discover how GenpicAI has transformed their creative journeys.</p>
+        <p class="text-center text-gray-400 font-bold text-xl pb-8">Hear from our amazing users and discover how AgriNav has transformed their creative journeys.</p>
 
 
 
