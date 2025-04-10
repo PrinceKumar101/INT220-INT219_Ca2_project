@@ -5,6 +5,7 @@ $success = $_SESSION["logout_success"] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
 
 ?>
+<link rel="stylesheet" href="./assets/css/style.css">
 
 <div class="bg-gray-100 ">
     <?php
