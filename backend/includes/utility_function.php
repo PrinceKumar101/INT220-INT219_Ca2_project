@@ -64,7 +64,7 @@ function display_error_message($err, $session_name)
 function display_success_message($success, $session_name)
 {
 
-    echo "<div class='text-xl font-semibold tracking-wider w-full text-center text-sky-500 p-2'><p>$success</p></div>";
+    echo "<div class='text-xl font-semibold tracking-wider w-full text-center text-green-500 p-2'><p>$success</p></div>";
     unset($_SESSION[$session_name]);
 }
 
