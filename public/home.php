@@ -102,7 +102,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
                     <!-- Right Section: Image Slider -->
                     <div class="md:w-1/2 bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="slider h-full">
+                        <div class="slider">
                             <div class="slides">
                                 <img src="./assets/images/crop1.jpg"
                                     alt="Crops" class="slide">
@@ -121,7 +121,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
 
 
-        <div class="bg-green-50 min-h-screen py-12">
+        <div class="bg-green-50 min-h-screen py-8">
             <div class="container mx-auto px-4">
                 <!-- Header -->
                 <div class="text-center mb-12">
@@ -171,7 +171,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
                             <h3 class="text-xl font-semibold text-green-700 mb-2">Talk to an Expert</h3>
                             <p class="text-gray-600 mb-4">Connect with agriculture specialists for guidance.</p>
                             <button class="expert-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300 " > 
-                                <a href="index.php?page=talk_to_exp" >Start Chat</a>
+                                <a href="index.php?page=login" >Start Chat</a>
                             </button>
                         </div>
                     </div>
@@ -185,7 +185,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
 
         <div class="text-white min-h-screen flex justify-center items-center bg-gradient-to-b from-green-100 to-amber-50">
-            <div class="container px-10 py-16 pl-32">
+            <div class="container px-10 pl-32">
                 <div class="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-20">
                     <!-- Left Section (Title) -->
                     <div id="faq-title" class="text-center lg:text-left w-full lg:w-1/3 opacity-0 animate-fade-in">
@@ -200,60 +200,56 @@ $success_message = $success ? $success[array_key_first($success)] : null;
                         <ul class="w-full max-w-2xl mx-auto space-y-6">
                             <!-- FAQ Item 1 -->
                             <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                <input type="radio" name="acc" id="first" class="peer hidden">
-                                <label for="first" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
-                                    <span class="flex items-center">
+                                <div class="flex justify-between items-center cursor-pointer accordion-header">
+                                    <span class="flex items-center text-lg font-semibold text-green-900">
                                         <img src="https://img.icons8.com/ios-filled/24/15803C/wheat.png" alt="Crops Icon" class="mr-3">
                                         Crop Solutions
                                     </span>
-                                    <span class="icon text-amber-600 transition-transform duration-300 peer-checked:rotate-45">+</span>
-                                </label>
-                                <div class="content overflow-hidden text-gray-600 max-h-0 peer-checked:max-h-40 transition-all duration-500">
+                                    <span class="icon text-amber-600 transition-transform duration-300">+</span>
+                                </div>
+                                <div class="content overflow-hidden text-gray-600 max-h-0">
                                     <p class="p-3">Explore our range of seeds, fertilizers, and tools designed to boost your crop yield sustainably.</p>
                                 </div>
                             </li>
 
                             <!-- FAQ Item 2 -->
                             <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                <input type="radio" name="acc" id="second" class="peer hidden">
-                                <label for="second" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
-                                    <span class="flex items-center">
+                                <div class="flex justify-between items-center cursor-pointer accordion-header">
+                                    <span class="flex items-center text-lg font-semibold text-green-900">
                                         <img src="https://img.icons8.com/ios-filled/24/15803C/tractor.png" alt="Tractor Icon" class="mr-3">
                                         Farm Services
                                     </span>
-                                    <span class="icon text-amber-600 transition-transform duration-300 peer-checked:rotate-45">+</span>
-                                </label>
-                                <div class="content overflow-hidden text-gray-600 max-h-0 peer-checked:max-h-40 transition-all duration-500">
+                                    <span class="icon text-amber-600 transition-transform duration-300">+</span>
+                                </div>
+                                <div class="content overflow-hidden text-gray-600 max-h-0">
                                     <p class="p-3">From equipment rentals to soil testing, we provide services to keep your farm thriving.</p>
                                 </div>
                             </li>
 
                             <!-- FAQ Item 3 -->
                             <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                <input type="radio" name="acc" id="third" class="peer hidden">
-                                <label for="third" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
-                                    <span class="flex items-center">
+                                <div class="flex justify-between items-center cursor-pointer accordion-header">
+                                    <span class="flex items-center text-lg font-semibold text-green-900">
                                         <img src="https://img.icons8.com/ios-filled/24/15803C/support.png" alt="Support Icon" class="mr-3">
                                         Farmer Support
                                     </span>
-                                    <span class="icon text-amber-600 transition-transform duration-300 peer-checked:rotate-45">+</span>
-                                </label>
-                                <div class="content overflow-hidden text-gray-600 max-h-0 peer-checked:max-h-40 transition-all duration-500">
+                                    <span class="icon text-amber-600 transition-transform duration-300">+</span>
+                                </div>
+                                <div class="content overflow-hidden text-gray-600 max-h-0">
                                     <p class="p-3">Get expert advice, troubleshooting, and resources tailored to your farming needs.</p>
                                 </div>
                             </li>
 
                             <!-- FAQ Item 4 -->
                             <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                <input type="radio" name="acc" id="fourth" class="peer hidden">
-                                <label for="fourth" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
-                                    <span class="flex items-center">
+                                <div class="flex justify-between items-center cursor-pointer accordion-header">
+                                    <span class="flex items-center text-lg font-semibold text-green-900">
                                         <img src="https://img.icons8.com/ios-filled/24/15803C/phone.png" alt="Contact Icon" class="mr-3">
                                         Contact Us
                                     </span>
-                                    <span class="icon text-amber-600 transition-transform duration-300 peer-checked:rotate-45">+</span>
-                                </label>
-                                <div class="content overflow-hidden text-gray-600 max-h-0 peer-checked:max-h-40 transition-all duration-500">
+                                    <span class="icon text-amber-600 transition-transform duration-300">+</span>
+                                </div>
+                                <div class="content overflow-hidden text-gray-600 max-h-0">
                                     <p class="p-3">Reach out to our team for personalized assistance—your farm’s success is our priority!</p>
                                 </div>
                             </li>
@@ -262,7 +258,6 @@ $success_message = $success ? $success[array_key_first($success)] : null;
                 </div>
             </div>
         </div>
-
 
 
 
@@ -344,8 +339,8 @@ $success_message = $success ? $success[array_key_first($success)] : null;
     </section>
 
 
-    <script src="./assets/js/gsap.js"></script>
-    <script src="./assets/js/js.js"></script>
+    <!-- <script src="./assets/js/gsap.js"></script> -->
+    <script src="./assets/js/script.js"></script>
 
 
 </div>

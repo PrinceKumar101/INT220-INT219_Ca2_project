@@ -28,39 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Footer Animations
-  const weatherBtn = document.querySelector(".weather-btn");
-  const cropBtn = document.querySelector(".crop-btn");
-  const expertBtn = document.querySelector(".expert-btn");
-
-  if (weatherBtn && cropBtn && expertBtn) {
-    weatherBtn.addEventListener("click", () => {
-      alert("Showing weather forecast for your area!");
-    });
-
-    cropBtn.addEventListener("click", () => {
-      alert("Generating crop recommendations based on your location!");
-    });
-
-    expertBtn.addEventListener("click", () => {
-      alert("Connecting you to a farming expert!");
-    });
-  }
+  
+  
 
   // Card Fade-In Animation
-  const cards = document.querySelectorAll(".card");
-  if (cards.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    cards.forEach((card) => observer.observe(card));
-  }
+  
 });
