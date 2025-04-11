@@ -73,7 +73,7 @@ $contact_success_message = $contact_success_key ? $contact_success[$contact_succ
                     <!-- Left Section: Content with Show More/Show Less -->
                     <div class="md:w-1/2 p-6">
                         <h2 class="text-2xl font-semibold text-green-700 mb-4">About Our Farming Solutions</h2>
-                        <p class="text-black mb-4">
+                        <p class="text-gray-600 mb-4">
                             Our platform offers innovative tools and resources to help farmers thrive in modern agriculture.
                             From weather forecasts to crop recommendations, we’ve got you covered. Whether you're looking to
                             improve productivity or adapt to changing climates, our solutions are designed with farmers in mind.
@@ -99,7 +99,7 @@ $contact_success_message = $contact_success_key ? $contact_success[$contact_succ
                                 future for agriculture that’s resilient and eco-friendly.
                             </p>
                         </div>
-                        <button id="toggleButton" class="md:hidden bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
+                        <button id="toggleButton" class="hidden bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
                             Show More
                         </button>
                     </div>
@@ -172,8 +172,8 @@ $contact_success_message = $contact_success_key ? $contact_success[$contact_succ
                                 alt="Expert" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Talk to an Expert</h3>
-                            <p class="text-gray-600 mb-4">Connect with agriculture specialists for guidance.</p>
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Farming Advisory</h3>
+                            <p class="text-gray-600 mb-4">Connect with our ai powered agriculture experts for guidance.</p>
                             <button class="expert-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300 " > 
                                 <a href="index.php?page=talk_to_exp" >Start Chat</a>
                             </button>
