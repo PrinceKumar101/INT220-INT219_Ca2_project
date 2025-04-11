@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Agriculture</title>
-    <!-- Using Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-</head>
-<body class="bg-gray-100">
+
+<?php
+$name=check_if_loggedIn()?$_SESSION['user']["name"]:"Guest";
+?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<div class="bg-gray-100">
     <div class="max-w-5xl mx-auto my-8 rounded-3xl overflow-hidden shadow-lg">
         <!-- Main container with background image -->
         <div class="relative bg-green-600 p-6 bg-cover bg-center" style="background-image: url(./assets/images/land1.jpg);">
@@ -20,12 +14,9 @@
                 </div>
                 <div class="flex items-center space-x-2">
                     <div class="bg-white rounded-full px-4 py-2 flex items-center">
-                        <i class="fa-solid fa-search mr-2"></i>
-                        <span>Search</span>
+                        <span><?= $name ?></span>
                     </div>
-                    <button class="bg-white rounded-full px-4 py-2">
-                        Contact Us
-                    </button>
+                
                 </div>
             </div>
             
@@ -48,9 +39,10 @@
                             <img src="./assets/images/weather2.jpg" alt="Avatar" class="rounded-full -mr-2">
                            
                         </div>
-                        
-                        <button class="bg-white border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
-                            <span>Explore Now</span>
+                        <button class=" bg-white border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[30px]">
+                           <a href="index.php?page=windex"> <span>Explore Now</span></a>
+                        </button>
+                
                     </div>
                 </div>
             </div>
@@ -71,7 +63,7 @@
                             <img src="./assets/images/expert.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
                         </div>
                         <button class="border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
-                            <span>Explore Now</span>
+                           <a href="index.php?page=talk_to_exp"> <span>Explore Now</span></a>
                         </button>
                     </div>
                 </div>
@@ -89,7 +81,7 @@
                             <img src="./assets/images/weatherfor.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
                         </div>
                         <button class="border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
-                            <span>Explore Now</span>
+                            <a href="index.php?page=weather"><span>Explore Now</span></a>
                         </button>
                     </div>
                 </div>
@@ -105,15 +97,14 @@
                             
                         </div>
                         <div class="mt-4">
-                            <img src="./assets/images/land1.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
+                            <img src="./assets/images/croprec.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
                         </div>
                         <button class="border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
-                            <span>Explore Now</span>
+                            <a href="index.php?page=community_forum"><span>Explore Now</span><a>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>

@@ -1,10 +1,14 @@
-<?php
+ <?php
 $error =  $_SESSION["logout_error"] ?? null;
 $error_message = $error ? $error[array_key_first($error)] : null;
 $success = $_SESSION["logout_success"] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
+$contact_success = $_SESSION["contact_success"] ?? null;
+$contact_success_key = $contact_success ? array_key_first($contact_success) : null;
+$contact_success_message = $contact_success_key ? $contact_success[$contact_success_key] :null;
 
 ?>
+<link rel="stylesheet" href="./assets/css/style.css">
 
 <div class="bg-gray-100 ">
     <?php
@@ -16,6 +20,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
         display_success_message($success_message, "logout_success");
     }
+    if(!empty($contact_success)) display_success_message($contact_success_message,"contact_success");
 
     ?>
     <section class="mt-4 relative w-full ">
@@ -68,7 +73,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
                     <!-- Left Section: Content with Show More/Show Less -->
                     <div class="md:w-1/2 p-6">
                         <h2 class="text-2xl font-semibold text-green-700 mb-4">About Our Farming Solutions</h2>
-                        <p class="text-black mb-4">
+                        <p class="text-gray-600 mb-4">
                             Our platform offers innovative tools and resources to help farmers thrive in modern agriculture.
                             From weather forecasts to crop recommendations, we’ve got you covered. Whether you're looking to
                             improve productivity or adapt to changing climates, our solutions are designed with farmers in mind.
@@ -94,7 +99,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
                                 future for agriculture that’s resilient and eco-friendly.
                             </p>
                         </div>
-                        <button id="toggleButton" class="md:hidden bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
+                        <button id="toggleButton" class="hidden bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
                             Show More
                         </button>
                     </div>
@@ -167,10 +172,10 @@ $success_message = $success ? $success[array_key_first($success)] : null;
                                 alt="Expert" class="w-full h-full object-cover">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-green-700 mb-2">Talk to an Expert</h3>
-                            <p class="text-gray-600 mb-4">Connect with agriculture specialists for guidance.</p>
-                            <button class="expert-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
-                                Start Chat
+                            <h3 class="text-xl font-semibold text-green-700 mb-2">Farming Advisory</h3>
+                            <p class="text-gray-600 mb-4">Connect with our ai powered agriculture experts for guidance.</p>
+                            <button class="expert-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300 " > 
+                                <a href="index.php?page=talk_to_exp" >Start Chat</a>
                             </button>
                         </div>
                     </div>
@@ -275,7 +280,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
             <h1 class="inline-block text-black text-7xl text-center" style="-webkit-text-stroke: 3px white;">User Feedback</h1>
 
         </div>
-        <p class="text-center text-gray-400 font-bold text-xl pb-8">Hear from our amazing users and discover how GenpicAI has transformed their creative journeys.</p>
+        <p class="text-center text-gray-400 font-bold text-xl pb-8">Hear from our amazing users and discover how AgriNav has transformed their creative journeys.</p>
 
 
 

@@ -55,7 +55,7 @@
     <a href="#" class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
       <i class="fa-brands fa-facebook icon"></i>
     </a>
-    <a href="#" class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
+    <a href="https://x.com/Agri_nav" class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
       <i class="fa-brands fa-twitter icon"></i>
     </a>
     <a href="#" class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">

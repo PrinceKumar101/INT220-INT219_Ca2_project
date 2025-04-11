@@ -64,7 +64,7 @@ function display_error_message($err, $session_name)
 function display_success_message($success, $session_name)
 {
 
-    echo "<div class='text-xl font-semibold tracking-wider w-full text-center text-sky-500 p-2'><p>$success</p></div>";
+    echo "<div class='text-xl font-semibold tracking-wider w-full text-center text-green-500 p-2'><p>$success</p></div>";
     unset($_SESSION[$session_name]);
 }
 
@@ -80,27 +80,46 @@ function go_to_location($location)
 
 function find_loggedin_user($isLoggedin, $user_id, $conn)
 {
-    if (!$isLoggedin){
-        $_SESSION["user"] = ["status"=>false];
+    if (!$isLoggedin) {
+        $_SESSION["user"] = ["status" => false];
         return;
     }
 
     $query = "select name,email,role from users where user_id='$user_id';";
     $result = mysqli_query($conn, $query);
-    if (!$result){
-        $_SESSION["user"] = ["status"=>false];
+    if (!$result) {
+        $_SESSION["user"] = ["status" => false];
         return;
     }
     $user = mysqli_fetch_assoc($result);
-    if (!$user){
-        $_SESSION["user"] = ["status"=>false];
+    if (!$user) {
+        $_SESSION["user"] = ["status" => false];
         return;
     }
-    $_SESSION["user"] = ["status"=>true,"name" => $user["name"], "email" => $user["email"], "role" => $user["role"]];
+    $_SESSION["user"] = ["status" => true, "name" => $user["name"], "email" => $user["email"], "role" => $user["role"]];
 }
-function logout_user($isloggedIn, $user_details){
-    if($_SESSION["$isloggedIn"]) unset($_SESSION[$isloggedIn]);
-    if($_SESSION["$user_details"]) unset($_SESSION[$user_details]);
+function logout_user($isloggedIn, $user_details)
+{
+    if ($_SESSION["$isloggedIn"]) unset($_SESSION[$isloggedIn]);
+    if ($_SESSION["$user_details"]) unset($_SESSION[$user_details]);
 
     return true;
+}
+function check_if_loggedIn()
+{
+    if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]["status"] && isset($_SESSION["user"]) && $_SESSION["user"]["status"]) return true;
+
+    return false;
+}
+function save_community_message($conn, $message)
+{
+    if (check_if_loggedIn()) {
+        $user_name = $_SESSION["user"]["name"];
+        $query = "insert into message (user_name, message) values('$user_name', '$message');";
+        $result = mysqli_query($conn, $query);
+        if (!$result) echo "error saving message.";
+    } else {
+        echo "User not found.";
+    }
+    return;
 }
