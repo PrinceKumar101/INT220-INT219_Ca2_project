@@ -16,7 +16,7 @@ function createChatBubble({ user_id, user_name, user_role, message }) {
     <div class="w-full flex ${alignmentClass} ">
       <div class="max-w-xs w-fit p-2 rounded-xl shadow ${bubbleColor}">
         <div class="flex items-center gap-2 mb-1">
-          <span class="font-semibold ${nameColor}">${user_name}</span>
+          <span class="font-semibold capitalize  ${nameColor}">${user_name}</span>
           <span class="text-sm">${roleIcon}</span>
         </div>
         <div class="text-base text-gray-800 break-words whitespace-pre-wrap">${message}</div>
