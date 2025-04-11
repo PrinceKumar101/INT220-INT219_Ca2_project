@@ -14,7 +14,7 @@ $user = ($isLoggedIn && isset($_SESSION["user"]) && $_SESSION["user"]["status"])
     ">
     
     <div class="flex items-center justify-between p-4">
-        <a href="#" class="text-3xl font-bold ml-2 sm:ml-10 text-(--primary-color)">AgriNav</a>
+        <a href="#" class="text-3xl font-bold ml-2 sm:ml-10 text-(--primary-text-color)">AgriNav</a>
 
         <button class="md:hidden text-(--primary-color) focus:outline-none text-3xl px-3" id="burger">
             ☰
