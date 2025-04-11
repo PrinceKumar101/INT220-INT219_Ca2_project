@@ -140,6 +140,6 @@
   <!-- Call to Action -->
   <div class="text-center">
     <p class="text-lg text-gray-700 mb-4">Join thousands of farmers already making smarter decisions. Sign up today!</p>
-    <button class="bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transform hover:scale-110 hover:shadow-lg transition duration-300 animate-bounce">Get Started</button>
+    <a href="index.php?page=signup" class="bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transform hover:scale-110 hover:shadow-lg transition duration-300 ">Get Started</a>
   </div>
 </div>
