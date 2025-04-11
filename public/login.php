@@ -6,11 +6,21 @@ $error_message = $error_key ? $error[$error_key] : null;
 $success = $_SESSION['login_success'] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
 
+$access_denied = $_SESSION["location_access_denied"] ?? null;
+$access_denied_message = $access_denied ? $access_denied[array_key_first($access_denied)] : null;
+
+
 ?>
 <div class="min-h-screen flex items-center justify-center px-4 -mt-5 [--primary-color:var(--color-green-500)] [--primary-button-color:var(--color-green-600)] [--primary-text-color:var(--color-black)]">
+
     <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
         <!-- Form Section -->
         <form action="../backend/auth/login.php" method="post" class="flex flex-col gap-6 w-full md:w-1/2">
+            <?php
+            if (!empty($access_denied)) {
+                display_error_message($access_denied_message, "location_access_denied");
+            }
+            ?>
             <h1 class="text-4xl font-bold text-(--primary-color) text-center">Login</h1>
 
             <div class="flex flex-col gap-2">
@@ -32,10 +42,10 @@ $success_message = $success ? $success[array_key_first($success)] : null;
             </div>
             <?php
             if (!empty($error)) {
-                display_error_message($error_message,"login_error");
+                display_error_message($error_message, "login_error");
             }
             if (!empty($success)) {
-                display_success_message($success_message,"login_success");
+                display_success_message($success_message, "login_success");
             }
             ?>
             <button class="bg-(--primary-color) hover:bg-(--primary-button-color) text-white font-semibold py-2 rounded-md hover:scale-105 transition-all">

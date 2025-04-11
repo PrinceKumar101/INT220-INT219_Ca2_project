@@ -32,21 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //mes features anim
   document.addEventListener("DOMContentLoaded", () => {
-    const weatherBtn = document.querySelector(".weather-btn");
-    const cropBtn = document.querySelector(".crop-btn");
-    const expertBtn = document.querySelector(".expert-btn");
-
-    weatherBtn.addEventListener("click", () => {
-      alert("Showing weather forecast for your area!");
-    });
-
-    cropBtn.addEventListener("click", () => {
-      alert("Generating crop recommendations based on your location!");
-    });
-
-    expertBtn.addEventListener("click", () => {
-      alert("Connecting you to a farming expert!");
-    });
 
     // Add fade-in effect when cards come into view
     const cards = document.querySelectorAll(".card");
