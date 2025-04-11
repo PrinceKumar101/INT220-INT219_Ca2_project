@@ -28,7 +28,7 @@ $name = $_ENV['NAME'];
         <!-- Navbar -->
         <header class="shadow-md sticky top-0 z-50 bg-inhert text-inhert opacity-95 backdrop-blur-2xl ">
                 <?php
-                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404") {
+                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page!="windex") {
                         include "./navbar.php";
                 }
                 ?>
@@ -42,7 +42,7 @@ $name = $_ENV['NAME'];
         <!-- Footer -->
         <footer class="text-black text-center">
                 <?php
-                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page!="community_forum") {
+                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page!="community_forum" && $page!="windex") {
                         include "./footer.php";
                 }
                 ?>
