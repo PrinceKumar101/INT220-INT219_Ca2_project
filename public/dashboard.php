@@ -12,7 +12,7 @@
 <body class="bg-gray-100">
     <div class="max-w-5xl mx-auto my-8 rounded-3xl overflow-hidden shadow-lg">
         <!-- Main container with background image -->
-        <div class="relative bg-green-600 p-6 bg-cover bg-center" style="background-image: url('land1.jpg');">
+        <div class="relative bg-green-600 p-6 bg-cover bg-center" style="background-image: url(./assets/images/land1.jpg);">
             <!-- Top navigation -->
             <div class="flex justify-between items-center mb-16">
                 <div class="flex space-x-2">
@@ -36,29 +36,21 @@
                     <h1 class="text-7xl font-semibold mb-2">Part of future</h1>
                     <h1 class="text-7xl font-semibold mb-6">Agriculture</h1>
                     
-                    <button class="border border-white rounded-full px-6 py-2 text-sm flex items-center mt-8">
-                        <span>SHOP All</span>
-                        <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
+                    
                 </div>
                 
                 <!-- Right side - Rating card -->
                 <div class="w-48">
                     <div class="bg-green-500 rounded-3xl p-4 text-white">
-                        <h2 class="text-4xl font-bold">4.9*</h2>
-                        <p class="text-xs mb-2">5,000 Customer Reviews</p>
+                        <h2 class="text-2xl font-bold">Weather</h2>
+                        <p class="text-xs mb-2">Check weather in your city</p>
                         <div class="flex mb-3">
-                            <img src="/api/placeholder/30/30" alt="Avatar" class="w-8 h-8 rounded-full -mr-2">
-                            <img src="/api/placeholder/30/30" alt="Avatar" class="w-8 h-8 rounded-full -mr-2">
-                            <img src="/api/placeholder/30/30" alt="Avatar" class="w-8 h-8 rounded-full -mr-2">
-                            <img src="/api/placeholder/30/30" alt="Avatar" class="w-8 h-8 rounded-full">
+                            <img src="./assets/images/weather2.jpg" alt="Avatar" class="rounded-full -mr-2">
+                           
                         </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-3xl font-bold">G</div>
-                            <div class="bg-green-600 rounded-full p-2">
-                                <i class="fa-solid fa-star text-white"></i>
-                            </div>
-                        </div>
+                        
+                        <button class="bg-white border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
+                            <span>Explore Now</span>
                     </div>
                 </div>
             </div>
@@ -66,54 +58,57 @@
             <!-- Product cards -->
             <div class="flex mt-16 space-x-4">
                 <!-- Product card 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden flex-1">
-                    <div class="flex">
-                        <div class="w-1/2 p-4">
-                            <h3 class="font-bold">DJI Agras T50</h3>
-                            <p class="text-xs text-gray-600 mb-4">Fully automatic and manual operation sprayed-ready available now</p>
-                            <button class="border border-gray-400 rounded-full px-4 py-1 text-xs">
-                                VIEW DETAILS
-                            </button>
+                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-80">
+                <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">Talk to expert</h3>
+                                <p class="text-xs text-gray-600">Connect with agriculture specialists for guidance and support</p>
+                            </div>
+                            
                         </div>
-                        <div class="w-1/2 bg-gray-200">
-                            <img src="/api/placeholder/200/150" alt="DJI Agras T50 Drone" class="w-full h-full object-cover">
+                        <div class="mt-4">
+                            <img src="./assets/images/expert.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
                         </div>
+                        <button class="border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
+                            <span>Explore Now</span>
+                        </button>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-3xl overflow-hidden flex-1">
-                    <div class="flex">
-                        <div class="w-1/2 p-4">
-                            <h3 class="font-bold">DJI Agras T50</h3>
-                            <p class="text-xs text-gray-600 mb-4">Fully automatic and manual operation sprayed-ready available now</p>
-                            <button class="border border-gray-400 rounded-full px-4 py-1 text-xs">
-                                VIEW DETAILS
-                            </button>
+                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-80">
+                <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold">WeatherForecast</h3>
+                                <p class="text-xs text-gray-600">Check weather in your area for better farming strategy</p>
+                            </div>
+                            
                         </div>
-                        <div class="w-1/2 bg-gray-200">
-                            <img src="/api/placeholder/200/150" alt="DJI Agras T50 Drone" class="w-full h-full object-cover">
+                        <div class="mt-4">
+                            <img src="./assets/images/weatherfor.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
                         </div>
+                        <button class="border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
+                            <span>Explore Now</span>
+                        </button>
                     </div>
                 </div>
                 
                 <!-- Product card 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden flex-1">
+                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-80">
                     <div class="p-4">
                         <div class="flex justify-between items-start">
                             <div>
-                                <h3 class="font-bold">DJI Agras T50</h3>
+                                <h3 class="font-bold">Community form</h3>
                                 <p class="text-xs text-gray-600">Fully automatic and manual operation sprayed-ready available now</p>
                             </div>
-                            <div class="bg-green-100 rounded-full p-1">
-                                <i class="fa-solid fa-arrow-up-right-from-square text-green-600"></i>
-                            </div>
+                            
                         </div>
                         <div class="mt-4">
-                            <img src="/api/placeholder/300/100" alt="DJI Agras T50 Controller" class="w-full h-24 object-contain">
+                            <img src="./assets/images/land1.jpg" alt="DJI Agras T50 Controller" class="w-full h-full object-contain rounded-3xl p-4">
                         </div>
-                        <button class="bg-green-800 text-white rounded-full px-4 py-2 text-xs flex items-center mt-2">
+                        <button class="border border-gray-400 text-black rounded-full px-4 py-2 text-xs flex items-center mt-2 ml-[85px]">
                             <span>Explore Now</span>
-                            <i class="fa-solid fa-arrow-right ml-2"></i>
                         </button>
                     </div>
                 </div>
