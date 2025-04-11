@@ -1,4 +1,4 @@
-<?php
+ <?php
 $error =  $_SESSION["logout_error"] ?? null;
 $error_message = $error ? $error[array_key_first($error)] : null;
 $success = $_SESSION["logout_success"] ?? null;
