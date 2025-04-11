@@ -1,12 +1,24 @@
+<?php
+$error = $_SESSION["contact_error"] ?? null;
+$error_key = $error ? array_key_first($error) : null;
+$error_message = $error_key ? $error[$error_key] : null;
+
+?>
+
 <div class="font-sans text-gray-700">
     <!-- Hero Section -->
     <section class="w-screen h-[20rem] bg-[url('./assets/images/contact_us.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-center ">
         <h1 class="text-6xl font-bold drop-shadow-lg">Contact Us</h1>
     </section>
 
+    <?php
+    if (!empty($error)) display_error_message($error_message, "contact_error");
+    ?>
+
     <!-- Main Content -->
     <div class="max-w-7xl mx-auto p-6 flex flex-col md:flex-row justify-between gap-8 mt-8">
         <!-- Left Section -->
+
         <div class="md:w-1/2 ">
             <h2 class="text-3xl font-bold mb-4">Let's Start a Conversation</h2>
             <h3 class="text-lg font-medium mb-2">Ask how we can support your farming journey:</h3>
