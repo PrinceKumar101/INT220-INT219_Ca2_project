@@ -3,6 +3,9 @@ $error =  $_SESSION["logout_error"] ?? null;
 $error_message = $error ? $error[array_key_first($error)] : null;
 $success = $_SESSION["logout_success"] ?? null;
 $success_message = $success ? $success[array_key_first($success)] : null;
+$contact_success = $_SESSION["contact_success"] ?? null;
+$contact_success_key = $contact_success ? array_key_first($contact_success) : null;
+$contact_success_message = $contact_success_key ? $contact_success[$contact_success_key] :null;
 
 ?>
 <link rel="stylesheet" href="./assets/css/style.css">
@@ -17,6 +20,7 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
         display_success_message($success_message, "logout_success");
     }
+    if(!empty($contact_success)) display_success_message($contact_success_message,"contact_success");
 
     ?>
     <section class="mt-4 relative w-full ">
