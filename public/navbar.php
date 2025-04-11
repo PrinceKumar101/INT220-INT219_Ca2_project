@@ -1,6 +1,6 @@
 <?php
-$nav_links = ["Home" => "home", "About" => "about","Contact Us" => "contact", "Weather" => "weather", "Sign In" => "login"];
-$nav_links_iflogged = ["Home" => "home", "About" => "about", "Contact Us" => "contact", "Weather" => "weather",  "Community" => "community_forum"];
+$nav_links = ["Home" => "home", "About" => "about", "Weather" => "weather", "Contact" => "contact", "Sign In" => "login"];
+$nav_links_iflogged = ["Home" => "home", "About" => "about", "Weather" => "weather", "Contact" => "contact", "Farming Advisory" => "farming_advisory", "Dashboard" => "dashboard", "Community" => "community_forum"];
 $isLoggedIn = (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]["status"]) ? $_SESSION["loggedIn"]["status"] : false;
 
 $user = ($isLoggedIn && isset($_SESSION["user"]) && $_SESSION["user"]["status"]) ? $_SESSION["user"] : null;

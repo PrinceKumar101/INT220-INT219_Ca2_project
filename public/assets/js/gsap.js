@@ -2,40 +2,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("toggleButton");
   const hiddenContent = document.getElementById("hiddenContent");
 
-  toggleButton.addEventListener("click", () => {
-    if (hiddenContent.classList.contains("hidden-content")) {
-      hiddenContent.classList.remove("hidden-content");
-      toggleButton.textContent = "Show Less";
-    } else {
-      hiddenContent.classList.add("hidden-content");
-      toggleButton.textContent = "Show More";
-    }
+  if (toggleButton && hiddenContent) {
+    toggleButton.addEventListener("click", () => {
+      hiddenContent.classList.toggle("hidden-content");
+      toggleButton.textContent = hiddenContent.classList.contains("hidden-content")
+        ? "Show More"
+        : "Show Less";
+    });
+  }
 
-    // Image Slider Functionality
-    const slides = document.querySelector(".slides");
-    const slideCount = document.querySelectorAll(".slide").length;
-    let currentIndex = 0;
+  // Image Slider Functionality
+  const slides = document.querySelector(".slides");
+  const slideItems = document.querySelectorAll(".slide");
+  let currentIndex = 0;
+  const slideCount = slideItems.length;
 
+  if (slides && slideCount > 1) {
     function slideNext() {
       currentIndex = (currentIndex + 1) % slideCount;
       slides.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    // Auto-slide every 12 seconds
-    setInterval(slideNext, 1500);
-
-    // Initial position
+    setInterval(slideNext, 3000); // Change slide every 3 seconds
     slides.style.transform = `translateX(0%)`;
-  });
+  }
 
   // Footer Animations
+  const weatherBtn = document.querySelector(".weather-btn");
+  const cropBtn = document.querySelector(".crop-btn");
+  const expertBtn = document.querySelector(".expert-btn");
 
-  //mes features anim
-  document.addEventListener("DOMContentLoaded", () => {
-    const weatherBtn = document.querySelector(".weather-btn");
-    const cropBtn = document.querySelector(".crop-btn");
-    const expertBtn = document.querySelector(".expert-btn");
-
+  if (weatherBtn && cropBtn && expertBtn) {
     weatherBtn.addEventListener("click", () => {
       alert("Showing weather forecast for your area!");
     });
@@ -47,9 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
     expertBtn.addEventListener("click", () => {
       alert("Connecting you to a farming expert!");
     });
+  }
 
-    // Add fade-in effect when cards come into view
-    const cards = document.querySelectorAll(".card");
+  // Card Fade-In Animation
+  const cards = document.querySelectorAll(".card");
+  if (cards.length) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -63,5 +62,5 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     cards.forEach((card) => observer.observe(card));
-  });
+  }
 });
