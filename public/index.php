@@ -42,7 +42,7 @@ $name = $_ENV['NAME'];
         <!-- Footer -->
         <footer class="text-black text-center">
                 <?php
-                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404") {
+                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page!="community_forum") {
                         include "./footer.php";
                 }
                 ?>
