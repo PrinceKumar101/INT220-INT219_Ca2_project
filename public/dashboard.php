@@ -31,7 +31,7 @@ $name=check_if_loggedIn()?$_SESSION['user']["name"]:"Guest";
                 </div>
                 
                 <!-- Right side - Rating card -->
-                <div class="w-48">
+                <div class="w-48 transform transition-transform duration-100 hover:scale-110">
                     <div class="bg-green-500 rounded-3xl p-4 text-white">
                         <h2 class="text-2xl font-bold">Weather</h2>
                         <p class="text-xs mb-2">Check weather in your city</p>
@@ -50,7 +50,7 @@ $name=check_if_loggedIn()?$_SESSION['user']["name"]:"Guest";
             <!-- Product cards -->
             <div class="flex mt-16 space-x-4">
                 <!-- Product card 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-80">
+                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-110">
                 <div class="p-4">
                         <div class="flex justify-between items-start">
                             <div>
@@ -68,7 +68,7 @@ $name=check_if_loggedIn()?$_SESSION['user']["name"]:"Guest";
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-80">
+                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-110">
                 <div class="p-4">
                         <div class="flex justify-between items-start">
                             <div>
@@ -87,12 +87,12 @@ $name=check_if_loggedIn()?$_SESSION['user']["name"]:"Guest";
                 </div>
                 
                 <!-- Product card 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-80">
+                <div class="bg-white rounded-3xl overflow-hidden flex-1 transform transition-transform duration-100 hover:scale-110">
                     <div class="p-4">
                         <div class="flex justify-between items-start">
                             <div>
                                 <h3 class="font-bold">Community form</h3>
-                                <p class="text-xs text-gray-600">Fully automatic and manual operation sprayed-ready available now</p>
+                                <p class="text-xs text-gray-600">Connect with world and share your expiernce and problems</p>
                             </div>
                             
                         </div>
