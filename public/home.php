@@ -217,7 +217,7 @@
                          <ul class="w-full max-w-2xl mx-auto space-y-6">
                              <!-- FAQ Item 1 -->
                              <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                 <input type="checkbox" name="acc" id="first" class="peer hidden">
+                                 
 
                                  <label for="first" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
                                      <span class="flex items-center">
