@@ -11,8 +11,8 @@ if (!$api_key) {
 
 
 
-$lat = $_SESSION["lati"]?? 25.6093239;
-$lon = $_SESSION["longi"]?? 85.1235252;
+$lat = $_SESSION["lati"] ?? 31.23967;
+$lon = $_SESSION["longi"] ?? 75.71098;
 
 $ch = curl_init();
 $options = [
@@ -66,4 +66,3 @@ if ($res?->cod == 200) {
 } else {
     $res_empty = true;
 }
-
