@@ -136,50 +136,63 @@
                  <!-- Cards Section -->
                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                      <!-- Weather Forecast Card -->
-                     <div class="card bg-white rounded-lg overflow-hidden fade-in" style="animation-delay: 0.1s;">
+                     <div class="card bg-white rounded-lg overflow-hidden fade-in flex flex-col" style="animation-delay: 0.1s;">
                          <div class="h-64 overflow-hidden">
-                             <img src="./assets/images/weatherfor.jpg"
-                                 alt="Weather" class="w-full h-full object-cover">
+                             <img src="./assets/images/weatherfor.jpg" alt="Weather" class="w-full h-full object-cover">
                          </div>
-                         <div class="p-6">
-                             <h3 class="text-xl font-semibold text-green-700 mb-2">Weather Forecast</h3>
-                             <p class="text-gray-600 mb-4">Stay ahead with accurate weather predictions for your farm.</p>
-                             <button class="weather-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
-                                 Check Forecast
-                             </button>
+                         <div class="p-6 flex flex-col flex-1 justify-between">
+                             <div>
+                                 <h3 class="text-xl font-semibold text-green-700 mb-2">Weather Forecast</h3>
+                                 <p class="text-gray-600 mb-4">Stay ahead with accurate weather predictions for your farm.</p>
+                             </div>
+                             <div class="mt-auto pt-4">
+                                 <a href="<?= get_access_if_loggedIn("index.php?page=weather", "index.php?page=login") ?>"
+                                     class=" w-fit block text-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
+                                     Check Forecast
+                                 </a>
+                             </div>
                          </div>
                      </div>
 
                      <!-- Crop Recommendation Card -->
-                     <div class="card bg-white rounded-lg overflow-hidden fade-in" style="animation-delay: 0.2s;">
+                     <div class="card bg-white rounded-lg overflow-hidden fade-in flex flex-col" style="animation-delay: 0.2s;">
                          <div class="h-64 overflow-hidden">
-                             <img src="./assets/images/croprec.jpg"
-                                 alt="Crops" class="w-full h-full object-cover">
+                             <img src="./assets/images/croprec.jpg" alt="Crops" class="w-full h-full object-cover">
                          </div>
-                         <div class="p-6">
-                             <h3 class="text-xl font-semibold text-green-700 mb-2">Crop Recommendations</h3>
-                             <p class="text-gray-600 mb-4">Get expert advice on the best crops for your land.</p>
-                             <button class="crop-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
-                                 Get Advice
-                             </button>
+                         <div class="p-6 flex flex-col flex-1 justify-between">
+                             <div>
+                                 <h3 class="text-xl font-semibold text-green-700 mb-2">Community Forum</h3>
+                                 <p class="text-gray-600 mb-4">Talk and share your experience with the world.</p>
+                             </div>
+                             <div class="mt-auto pt-4">
+                                 <a href="<?= get_access_if_loggedIn("index.php?page=community_forum", "index.php?page=login") ?>"
+                                     class=" w-fit block text-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
+                                     Community
+                                 </a>
+                             </div>
                          </div>
                      </div>
 
                      <!-- Expert Consultation Card -->
-                     <div class="card bg-white rounded-lg overflow-hidden fade-in" style="animation-delay: 0.3s;">
+                     <div class="card bg-white rounded-lg overflow-hidden fade-in flex flex-col" style="animation-delay: 0.3s;">
                          <div class="h-64 overflow-hidden">
-                             <img src="./assets/images/expert.jpg"
-                                 alt="Expert" class="w-full h-full object-cover">
+                             <img src="./assets/images/expert.jpg" alt="Expert" class="w-full h-full object-cover">
                          </div>
-                         <div class="p-6">
-                             <h3 class="text-xl font-semibold text-green-700 mb-2">Farming Advisory</h3>
-                             <p class="text-gray-600 mb-4">Connect with our ai powered agriculture experts for guidance.</p>
-                             <button class="expert-btn bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300 ">
-                                 <a href="index.php?page=talk_to_exp">Start Chat</a>
-                             </button>
+                         <div class="p-6 flex flex-col flex-1 justify-between">
+                             <div>
+                                 <h3 class="text-xl font-semibold text-green-700 mb-2">Farming Advisory</h3>
+                                 <p class="text-gray-600 mb-4">Connect with our AI-powered agriculture experts for guidance.</p>
+                             </div>
+                             <div class="mt-auto pt-4">
+                                 <a href="<?= get_access_if_loggedIn("index.php?page=talk_to_exp", "index.php?page=login") ?>"
+                                     class=" w-fit block text-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
+                                     Start Chat
+                                 </a>
+                             </div>
                          </div>
                      </div>
                  </div>
+
              </div>
          </div>
 
@@ -204,7 +217,8 @@
                          <ul class="w-full max-w-2xl mx-auto space-y-6">
                              <!-- FAQ Item 1 -->
                              <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                 <input type="radio" name="acc" id="first" class="peer hidden">
+                                 <input type="checkbox" name="acc" id="first" class="peer hidden">
+
                                  <label for="first" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
                                      <span class="flex items-center">
                                          <img src="https://img.icons8.com/ios-filled/24/15803C/wheat.png" alt="Crops Icon" class="mr-3">
@@ -219,7 +233,8 @@
 
                              <!-- FAQ Item 2 -->
                              <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                 <input type="radio" name="acc" id="second" class="peer hidden">
+                                 <input type="checkbox" name="acc" id="second" class="peer hidden">
+
                                  <label for="second" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
                                      <span class="flex items-center">
                                          <img src="https://img.icons8.com/ios-filled/24/15803C/tractor.png" alt="Tractor Icon" class="mr-3">
@@ -234,7 +249,8 @@
 
                              <!-- FAQ Item 3 -->
                              <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                 <input type="radio" name="acc" id="third" class="peer hidden">
+                                 <input type="checkbox" name="acc" id="third" class="peer hidden">
+
                                  <label for="third" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
                                      <span class="flex items-center">
                                          <img src="https://img.icons8.com/ios-filled/24/15803C/support.png" alt="Support Icon" class="mr-3">
@@ -249,7 +265,8 @@
 
                              <!-- FAQ Item 4 -->
                              <li class="faq-item bg-white p-6 rounded-xl shadow-lg border border-green-200 transition-all hover:shadow-xl">
-                                 <input type="radio" name="acc" id="fourth" class="peer hidden">
+                                 <input type="checkbox" name="acc" id="fourth" class="peer hidden">
+
                                  <label for="fourth" class="flex justify-between items-center cursor-pointer text-lg font-semibold text-green-900">
                                      <span class="flex items-center">
                                          <img src="https://img.icons8.com/ios-filled/24/15803C/phone.png" alt="Contact Icon" class="mr-3">
