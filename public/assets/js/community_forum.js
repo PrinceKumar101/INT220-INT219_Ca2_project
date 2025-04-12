@@ -4,20 +4,26 @@ function createChatBubble({ user_id, user_name, user_role, message }) {
   const isCurrentUser = String(user_id) == String(USER_ID);
   console.log(USER_ID);
   console.log(user_id);
-  
+
   console.log(isCurrentUser);
-  
-  const alignmentClass = isCurrentUser ? "items-end justify-end" : "items-start justify-start";
-  const bubbleColor = isCurrentUser ? "bg-blue-200" : "bg-slate-200";
+
+  const alignmentClass = isCurrentUser
+    ? "items-end justify-end"
+    : "items-start justify-start";
+  const bubbleColor = isCurrentUser ? "bg-zinc-100" : "bg-slate-200";
   const nameColor = user_role === "expert" ? "text-blue-700" : "text-green-700";
-  const roleIcon = user_role === "expert" ? "✅" : "";
+  const roleIcon = user_role === "expert" ? true : false;
+  const roleIconHTML = roleIcon
+    ? `<img src="./assets/images/tick-mark.png" class="size-5" />`
+    : "";
 
   return `
     <div class="w-full flex ${alignmentClass} ">
       <div class="max-w-xs w-fit p-2 rounded-xl shadow ${bubbleColor}">
         <div class="flex items-center gap-2 mb-1">
           <span class="font-semibold capitalize  ${nameColor}">${user_name}</span>
-          <span class="text-sm">${roleIcon}</span>
+          ${roleIconHTML}
+
         </div>
         <div class="text-base text-gray-800 break-words whitespace-pre-wrap">${message}</div>
       </div>
@@ -56,7 +62,6 @@ ws.onmessage = function (event) {
   try {
     const data = JSON.parse(event.data);
     console.log(data);
-    
 
     if (data.status === true && Array.isArray(data.prev_messages)) {
       data.prev_messages.forEach((msg) => {

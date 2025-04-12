@@ -365,7 +365,6 @@
      </section>
 
 
-     <script src="./assets/js/gsap.js"></script>
      <script src="./assets/js/js.js"></script>
 
 
