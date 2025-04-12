@@ -123,3 +123,11 @@ function save_community_message($conn, $message)
     }
     return;
 }
+
+function get_access_if_loggedIn($success_location, $failure_location){
+    if(!check_if_loggedIn()){
+        $_SESSION["access_denied"] = ["error"=>"You must login first."];
+        return $failure_location;
+    }
+    return $success_location;
+}

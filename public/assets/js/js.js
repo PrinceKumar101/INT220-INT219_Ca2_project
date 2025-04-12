@@ -1,67 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // FAQ Toggle Functionality using checkboxes
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const input = item.querySelector("input[type='checkbox']");
+    const label = item.querySelector("label");
+
+    label.addEventListener("click", () => {
+      input.checked = !input.checked; // toggle open/close
+    });
+  });
+
+  // "Show More" Toggle
   const toggleButton = document.getElementById("toggleButton");
   const hiddenContent = document.getElementById("hiddenContent");
 
-  toggleButton.addEventListener("click", () => {
-    if (hiddenContent.classList.contains("hidden-content")) {
-      hiddenContent.classList.remove("hidden-content");
-      toggleButton.textContent = "Show Less";
-    } else {
-      hiddenContent.classList.add("hidden-content");
-      toggleButton.textContent = "Show More";
-    }
+  if (toggleButton && hiddenContent) {
+    toggleButton.addEventListener("click", () => {
+      hiddenContent.classList.toggle("hidden-content");
+      toggleButton.textContent = hiddenContent.classList.contains("hidden-content")
+        ? "Show More"
+        : "Show Less";
+    });
+  }
 
-    // Image Slider Functionality
-    const slides = document.querySelector(".slides");
-    const slideCount = document.querySelectorAll(".slide").length;
-    let currentIndex = 0;
+  // Image Slider Functionality
+  const slides = document.querySelector(".slides");
+  const slideCount = document.querySelectorAll(".slide").length;
+  let currentIndex = 0;
 
-    function slideNext() {
-      currentIndex = (currentIndex + 1) % slideCount;
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+  function slideNext() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    if (slides) slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 
-    // Auto-slide every 12 seconds
+  if (slides) {
     setInterval(slideNext, 1500);
-
-    // Initial position
     slides.style.transform = `translateX(0%)`;
-  });
+  }
 
-  // Footer Animations
+  // Card fade-in animation
+  const cards = document.querySelectorAll(".card");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-  //mes features anim
-  document.addEventListener("DOMContentLoaded", () => {
-    const weatherBtn = document.querySelector(".weather-btn");
-    const cropBtn = document.querySelector(".crop-btn");
-    const expertBtn = document.querySelector(".expert-btn");
-
-    weatherBtn.addEventListener("click", () => {
-      alert("Showing weather forecast for your area!");
-    });
-
-    cropBtn.addEventListener("click", () => {
-      alert("Generating crop recommendations based on your location!");
-    });
-
-    expertBtn.addEventListener("click", () => {
-      alert("Connecting you to a farming expert!");
-    });
-
-    // Add fade-in effect when cards come into view
-    const cards = document.querySelectorAll(".card");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    cards.forEach((card) => observer.observe(card));
-  });
+  cards.forEach((card) => observer.observe(card));
 });
