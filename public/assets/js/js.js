@@ -1,14 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // FAQ Toggle Functionality using checkboxes
+  // FAQ Toggle Functionality
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
-    const input = item.querySelector("input[type='checkbox']");
     const label = item.querySelector("label");
+    const content = item.querySelector(".content");
+    const icon = item.querySelector(".icon");
 
     label.addEventListener("click", () => {
-      input.checked = !input.checked; // toggle open/close
+      const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+
+      // Close all items (accordion behavior)
+      faqItems.forEach((otherItem) => {
+        const otherContent = otherItem.querySelector(".content");
+        const otherIcon = otherItem.querySelector(".icon");
+        if (otherContent !== content) {
+          otherContent.style.maxHeight = "0px";
+          otherIcon.style.transform = "rotate(0deg)";
+        }
+      });
+
+      // Toggle the clicked item
+      if (isOpen) {
+        content.style.maxHeight = "0px";
+        icon.style.transform = "rotate(0deg)";
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.style.transform = "rotate(45deg)";
+      }
     });
+  });
+
+  // Optional: Add default styles to all .content divs
+  document.querySelectorAll(".content").forEach((el) => {
+    el.style.overflow = "hidden";
+    el.style.transition = "max-height 0.4s ease";
+    el.style.maxHeight = "0px";
   });
 
   // "Show More" Toggle
