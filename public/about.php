@@ -138,7 +138,7 @@
       <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
         <p class="text-gray-700 italic">“This platform connects me to new buyers I never had access to before.”</p>
         <div class="mt-4 flex items-center">
-          <img src="./assets/images/farmer4.jpg" alt="Farmer 4" class="w-12 h-12 rounded-full mr-3">
+          <img src="./assets/images/farmer1.jpg" alt="Farmer 4" class="w-12 h-12 rounded-full mr-3">
           <div>
             <p class="text-green-600 font-semibold">Rekha Singh</p>
             <p class="text-gray-500 text-sm">Uttar Pradesh</p>
@@ -148,7 +148,7 @@
       <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
         <p class="text-gray-700 italic">“Accurate weather updates have saved my crops multiple times.”</p>
         <div class="mt-4 flex items-center">
-          <img src="./assets/images/farmer5.jpg" alt="Farmer 5" class="w-12 h-12 rounded-full mr-3">
+          <img src="./assets/images/lakshmi.jpg" alt="Farmer 5" class="w-12 h-12 rounded-full mr-3">
           <div>
             <p class="text-green-600 font-semibold">Manoj Verma</p>
             <p class="text-gray-500 text-sm">Madhya Pradesh</p>
@@ -158,7 +158,7 @@
       <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
         <p class="text-gray-700 italic">“I can now sell directly without middlemen and save money.”</p>
         <div class="mt-4 flex items-center">
-          <img src="./assets/images/farmer6.jpg" alt="Farmer 6" class="w-12 h-12 rounded-full mr-3">
+          <img src="./assets/images/farmer3.jpg" alt="Farmer 6" class="w-12 h-12 rounded-full mr-3">
           <div>
             <p class="text-green-600 font-semibold">Anita Reddy</p>
             <p class="text-gray-500 text-sm">Telangana</p>
