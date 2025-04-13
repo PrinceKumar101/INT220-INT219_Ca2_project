@@ -61,7 +61,7 @@
     </div>
 
     <footer class="footer">
-        <p class="footer-text">© Copyright – All Rights Reserved Team AgriSens</p>
+        <p class="footer-text">© Copyright – All Rights Reserved Team AgriNav</p>
     </footer>
 
     <script src="./assets/js/script.js"></script>
