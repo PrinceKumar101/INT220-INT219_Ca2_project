@@ -36,7 +36,11 @@ $name = $_ENV['NAME'];
 
         <!-- Main Content -->
         <main class="flex flex-col items-center justify-center p-(--padding-whole)  [--padding-whole:--spacing(0)] overflow-hidden">
-                <?php include $content; ?>
+                
+                <?php
+                $protected_pages = ["talk_to_exp","community_forum","weather"];
+                protect_pages($protected_pages,$page,$content,"login");
+                include $content; ?>
         </main>
 
         <!-- Footer -->

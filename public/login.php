@@ -4,10 +4,12 @@ $error = $_SESSION["login_error"] ?? null;
 $error_key = $error ? array_key_first($error) : null;
 $error_message = $error_key ? $error[$error_key] : null;
 $success = $_SESSION['login_success'] ?? null;
-$success_message = $success ? $success[array_key_first($success)] : null;
+$succes_key = $success?array_key_first($success):null;
+$success_message = ($succes_key && $success) ? $success[$succes_key] : null;
 
 $access_denied = $_SESSION["access_denied"] ?? null;
-$access_denied_message  = $access_denied ? $access_denied[array_key_first($access_denied)] : null;
+$access_denied_key = $access_denied ? array_key_first($access_denied):null;
+$access_denied_message  = ($access_denied && $access_denied_key) ? $access_denied[$access_denied_key] : null;
 
 
 ?>

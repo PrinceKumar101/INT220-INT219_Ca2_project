@@ -146,7 +146,7 @@
                                  <p class="text-gray-600 mb-4">Stay ahead with accurate weather predictions for your farm.</p>
                              </div>
                              <div class="mt-auto pt-4">
-                                 <a href="<?= get_access_if_loggedIn("index.php?page=weather", "index.php?page=login") ?>"
+                                 <a href="index.php?page=weather"
                                      class=" w-fit block text-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
                                      Check Forecast
                                  </a>
@@ -165,7 +165,7 @@
                                  <p class="text-gray-600 mb-4">Talk and share your experience with the world.</p>
                              </div>
                              <div class="mt-auto pt-4">
-                                 <a href="<?= get_access_if_loggedIn("index.php?page=community_forum", "index.php?page=login") ?>"
+                                 <a href="index.php?page=community_forum"
                                      class=" w-fit block text-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
                                      Community
                                  </a>
@@ -184,7 +184,7 @@
                                  <p class="text-gray-600 mb-4">Connect with our AI-powered agriculture experts for guidance.</p>
                              </div>
                              <div class="mt-auto pt-4">
-                                 <a href="<?= get_access_if_loggedIn("index.php?page=talk_to_exp", "index.php?page=login") ?>"
+                                 <a href="index.php?page=talk_to_exp"
                                      class=" w-fit block text-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors duration-300">
                                      Start Chat
                                  </a>
