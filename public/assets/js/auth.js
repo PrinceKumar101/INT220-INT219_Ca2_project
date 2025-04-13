@@ -11,3 +11,6 @@ function handle_password_visiblity(input_section, img_section) {
 }
 
 
+
+
+

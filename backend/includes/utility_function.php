@@ -107,7 +107,7 @@ function logout_user($isloggedIn, $user_details)
 }
 function check_if_loggedIn()
 {
-    if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]["status"] && isset($_SESSION["user"]) && $_SESSION["user"]["status"]) return true;
+    if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]["status"] && isset($_SESSION["user"]) && $_SESSION["user"]["status"]) return true;
 
     return false;
 }
@@ -124,10 +124,13 @@ function save_community_message($conn, $message)
     return;
 }
 
-function get_access_if_loggedIn($success_location, $failure_location){
-    if(!check_if_loggedIn()){
-        $_SESSION["access_denied"] = ["error"=>"You must login first."];
-        return $failure_location;
+
+
+function protect_pages($protected_pages, &$page, &$content, $redirect_page)
+{
+    if (in_array($page, $protected_pages) && !check_if_loggedIn()) {
+        $_SESSION["access_denied"] = ["error" => "You must login first."];
+        $page = $redirect_page;
+        $content = "./$redirect_page.php";
     }
-    return $success_location;
 }
