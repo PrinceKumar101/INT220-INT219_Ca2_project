@@ -4,8 +4,9 @@
     <h1 class="text-4xl md:text-5xl font-extrabold text-green-700 mb-4 animate-fade-in">Empowering Farmers, Enriching Lives</h1>
     <p class="text-lg text-gray-600 italic">“We are dedicated to supporting farmers with smart tools, real-time data, and reliable market access.”</p>
     <div class="mt-6 w-full max-w-4xl mx-auto relative overflow-hidden rounded-lg shadow-lg">
-      <img src="./assets/images/field.jpg" alt="Farmers in the field" class="w-full transform hover:scale-110 transition duration-500">
-      <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-0 transition duration-300"></div>
+      <!-- <img src="./assets/images/field.jpg" alt="Farmers in the field" class="w-full transform hover:scale-110 transition duration-500"> -->
+       <video src="./assets/images/1560989-hd_1280_720_30fps (1).mp4" class="w-full transform hover:scale-110 transition duration-500" ></video>
+      <!-- <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-0 transition duration-300"></div> -->
     </div>
   </div>
 
