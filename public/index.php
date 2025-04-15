@@ -28,7 +28,7 @@ $name = $_ENV['NAME'];
         <!-- Navbar -->
         <header class="shadow-md sticky top-0 z-50 bg-inhert text-inhert opacity-95 backdrop-blur-2xl ">
                 <?php
-                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page!="windex") {
+                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page != "windex") {
                         include "./navbar.php";
                 }
                 ?>
@@ -36,17 +36,17 @@ $name = $_ENV['NAME'];
 
         <!-- Main Content -->
         <main class="flex flex-col items-center justify-center p-(--padding-whole)  [--padding-whole:--spacing(0)] overflow-hidden">
-                
+
                 <?php
-                $protected_pages = ["talk_to_exp","community_forum","weather"];
-                protect_pages($protected_pages,$page,$content,"login");
+                $protected_pages = ["talk_to_exp", "community_forum", "weather"];
+                protect_pages($protected_pages, $page, $content, "login");
                 include $content; ?>
         </main>
 
         <!-- Footer -->
         <footer class="text-black text-center">
                 <?php
-                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page!="community_forum" && $page!="windex") {
+                if ($page != "login" && $page != "signup" && $page != "forgot_password" && $page != "reset_password" && $page != "404" && $page != "community_forum" && $page != "windex") {
                         include "./footer.php";
                 }
                 ?>

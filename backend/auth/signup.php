@@ -33,9 +33,14 @@ if (check_if_email_exists($email, $conn)) {
     $_SESSION["signup_error"] = ["email" => "Email id already exits."];
     go_to_location_with_exit($signup_page_location);
 }
+$pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/";
 
 if (!$password || strlen($password) < 8) {
+
     $_SESSION["signup_error"] = ["password" => "Password must be atleast 8 characters."];
+    go_to_location_with_exit($signup_page_location);
+} else if (!preg_match($pattern, $password)) {
+    $_SESSION["signup_error"] = ["password" => "Password must have numbers, letters and special characters."];
     go_to_location_with_exit($signup_page_location);
 }
 if (!$role || !in_array($role, ["farmer", "expert"])) {

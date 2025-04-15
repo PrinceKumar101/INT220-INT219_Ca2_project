@@ -119,6 +119,8 @@ $apiKeyGemini = $_ENV["API_KEY"];
             );
 
             if (!response.ok) {
+              console.log(response);
+              
               throw new Error("There was an issue with the request. Please try again.");
             }
 
@@ -137,7 +139,7 @@ $apiKeyGemini = $_ENV["API_KEY"];
             }
           } catch (err) {
             console.error(err);
-            return "Sorry, we encountered an error while processing your request. Please try again later.";
+            return "Sorry, we encountered an error while processing your request. Please try again later. ";
           }
         }
 
@@ -150,6 +152,8 @@ $apiKeyGemini = $_ENV["API_KEY"];
           userInput.value = "";
 
           const response = await getGeminiResponse(input);
+          console.log(response);
+          
           addMessage(response);
         }
 
