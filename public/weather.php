@@ -71,9 +71,8 @@ include_once "../backend/weather_curl.php";
                                         <span class="text-sm" id="current_day"><?= date("l") ?></span>
                                     </div>
                                     <div class="flex flex-wrap md:flex-row gap-4 md:gap-8 justify-center items-center">
-                                        <!-- <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
-                                            <img src="./assets/images/" alt="">
-                                        </div> -->
+                                    <img src="<?= $img_src ?>" alt="Weather Icon" class="w-16 h-16 bg-slate-200 rounded-full">
+
                                         <h1 class="text-5xl md:text-6xl font-light text-blue-900" id="current_temp">
                                             <?= current_temp($res) ?>
                                         </h1>
