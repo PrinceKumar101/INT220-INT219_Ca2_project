@@ -14,7 +14,7 @@ $website_name = $_ENV['WEBSITE_NAME'];
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo $website_name ?></title>
+        <title><?php echo $website_name  ?></title>
         <link rel="icon" href="./assets/images/agrilogo.jpg">
         <link href="./assets/css/output.css" rel="stylesheet">
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
