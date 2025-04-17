@@ -4,7 +4,7 @@ require_once '../backend/includes/header.php';
 require_once '../backend/includes/utility_function.php';
 
 
-$name = $_ENV['NAME'];
+$website_name = $_ENV['WEBSITE_NAME'];
 
 ?>
 
@@ -14,7 +14,8 @@ $name = $_ENV['NAME'];
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo $name ?></title>
+        <title><?php echo $website_name ?></title>
+        <link rel="icon" href="./assets/images/agrilogo.jpg">
         <link href="./assets/css/output.css" rel="stylesheet">
         <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
