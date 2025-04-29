@@ -1,6 +1,16 @@
 const ws = new WebSocket("ws://localhost:8080");
 
-function createChatBubble({ user_id, user_name, user_role, message }) {
+function editChat(){
+   console.log("clicked");
+   
+}
+function createChatBubble({
+  message_id,
+  user_id,
+  user_name,
+  user_role,
+  message,
+}) {
   const isCurrentUser = String(user_id) == String(USER_ID);
   console.log(USER_ID);
   console.log(user_id);
@@ -18,7 +28,7 @@ function createChatBubble({ user_id, user_name, user_role, message }) {
     : "";
 
   return `
-    <div class="w-full flex ${alignmentClass} ">
+    <div  class="id='${message_id}' w-full flex ${alignmentClass} " >
       <div class="max-w-xs w-fit p-2 rounded-xl shadow ${bubbleColor}">
         <div class="flex items-center gap-2 mb-1">
           <span class="font-semibold capitalize  ${nameColor}">${user_name}</span>
@@ -66,6 +76,7 @@ ws.onmessage = function (event) {
     if (data.status === true && Array.isArray(data.prev_messages)) {
       data.prev_messages.forEach((msg) => {
         appendMessage({
+          message_id: msg[0],
           user_id: msg[5],
           user_name: msg[1],
           user_role: msg[4],

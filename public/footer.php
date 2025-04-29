@@ -49,7 +49,7 @@
 
   <!-- Social Icons -->
   <div class="flex justify-center gap-6 p-4 text-3xl">
-    <a href="#" class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
+    <a href="https://www.instagram.com/agriculture123524?igsh=eDY3b3RycjF6MGZm " class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
       <i class="fa-brands fa-instagram icon"></i>
     </a>
     <a href="#" class="text-white hover:text-yellow-300 transition-all duration-300 transform hover:scale-125 hover:rotate-12">

@@ -1,8 +1,10 @@
 module.exports = {
-  content: ["./**/*.php"],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
-};
+}

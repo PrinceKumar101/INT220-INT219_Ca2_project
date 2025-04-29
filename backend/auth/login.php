@@ -19,8 +19,10 @@ if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     go_to_location_with_exit($login_page_location);
 }
 
-$query = "select user_id from users where email='$email';";
-$result = mysqli_query($conn, $query);
+$stmt = $conn->prepare("SELECT user_id FROM users WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if (!$result) {
     $_SESSION["login_error"] = ["email" => "User not found."];

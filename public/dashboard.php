@@ -13,8 +13,8 @@ $name=check_if_loggedIn()?$_SESSION['user']["name"]:"Guest";
                    
                 </div>
                 <div class="flex items-center space-x-2">
-                    <div class="bg-white rounded-full px-4 py-2 flex items-center">
-                        <span><?= $name ?></span>
+                    <div class="bg-white/40 rounded-full px-4 py-2 flex items-center border border-white shadow-[0_0_15px_rgba(255,165,0,0.5)]">
+                        <span class=" capitalize text-xl">Welcome <?= $name ?></span>
                     </div>
                 
                 </div>

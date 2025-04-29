@@ -31,6 +31,18 @@ $apiKeyGemini = $_ENV["API_KEY"];
       </div>
 
 
+
+
+
+
+
+
+
+      
+
+
+      
+
       <script>
         const chatBox = document.getElementById("chatBox");
         const userInput = document.getElementById("userInput");

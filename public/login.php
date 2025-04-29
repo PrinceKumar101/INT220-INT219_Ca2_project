@@ -14,7 +14,7 @@ $access_denied_message  = ($access_denied && $access_denied_key) ? $access_denie
 
 ?>
 <div class="min-h-screen flex items-center justify-center px-4 -mt-5 [--primary-color:var(--color-green-500)] [--primary-button-color:var(--color-green-600)] [--primary-text-color:var(--color-black)]">
-    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
+    <div class="bg-inherit/5 p-6 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
         <!-- Form Section -->
         <form action="../backend/auth/login.php" method="post" class="flex flex-col gap-6 w-full md:w-1/2">
             <?php
@@ -26,7 +26,7 @@ $access_denied_message  = ($access_denied && $access_denied_key) ? $access_denie
 
             <div class="flex flex-col gap-2">
                 <label for="email" class="text-(--primary-text-color) font-medium">Email</label>
-                <input type="email" name="email" placeholder="MrDark@gmail.com"
+                <input type="email" name="email" placeholder="example@gmail.com"
                     class="bg-(--primary-color)/5 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all focus:duration-350">
             </div>
 

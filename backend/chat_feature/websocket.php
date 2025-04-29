@@ -51,9 +51,8 @@ class Chat implements MessageComponentInterface
         $this->clients->attach($conn);
         $previous_message = $this->fetch_previous_messages();
         $conn->send($previous_message);
-
     }
-    
+
     public function onMessage(ConnectionInterface $from, $msg)
     {
         $data = json_decode($msg, true);
@@ -64,11 +63,12 @@ class Chat implements MessageComponentInterface
             $user_role = $data["user_role"];
             $user_id = $data["user_id"];
             $message = $data["message"];
-            $query = "insert into message (user_name, message,role,user_id) values('$user_name', '$message','$user_role', '$user_id');";
-            $result = mysqli_query($this->db_conn, $query);
-            if (!$result) echo "Error with saving messsage.";
+            $stmt = $this->db_conn->prepare("INSERT INTO message (user_name, message, role, user_id) VALUES (?, ?, ?, ?)");
+            $stmt->bind_param("sssi", $user_name, $message, $user_role, $user_id);
+            $result = $stmt->execute();
+            if (!$result) echo "Error saving message.";
+            $stmt->close();
         }
-        // Just for debugging
 
 
         foreach ($this->clients as $client) {

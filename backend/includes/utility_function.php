@@ -16,44 +16,56 @@ function hash_password($pass)
 
 function compare_password($pass, $conn, $user_id)
 {
-    $query = "select password from users where user_id='$user_id';";
-    $result = mysqli_query($conn, $query);
-    if (!$result) return false;
-    $hashed_password = mysqli_fetch_column($result);
-    $pass = trim($pass);
+    $query = "SELECT password FROM users WHERE user_id=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if ($result->num_rows === 0) return false;
+
+    $hashed_password = $result->fetch_assoc()['password'];
     return password_verify($pass, $hashed_password);
 }
 
+
 function check_if_email_exists($email, $conn)
 {
-    $query = "select user_id from users where email='$email';";
-    $result = mysqli_query($conn, $query);
-    $row = mysqli_fetch_assoc($result);
-    if ($row) return true;
-    return false;
+    $query = "SELECT user_id FROM users WHERE email=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->num_rows > 0;
 }
 
 function reset_password($email, $password, $conn)
 {
-    $query = "select user_id from users where email='$email'";
+    $query = "SELECT user_id FROM users WHERE email=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    $result = mysqli_query($conn, $query);
-    if (!$result) {
-        $_SESSION["reset_password_error"] = ["error" => "Some error occured <br> try again later."];
+    if ($result->num_rows === 0) {
+        $_SESSION["reset_password_error"] = ["error" => "Email not found."];
         return false;
     }
-    $password = hash_password($password);
-    $result_for_id = mysqli_fetch_assoc($result);
-    $id = $result_for_id["user_id"];
-    $resting_query = "update users set password='$password' where user_id = '$id';";
 
-    $password_reseted = mysqli_query($conn, $resting_query);
-    if (!$password_reseted) {
-        $_SESSION["reset_password_error"] = ["error" => "Some error occured <br> try again later."];
+    $password = hash_password($password);
+    $row = $result->fetch_assoc();
+    $id = $row["user_id"];
+
+    $reset_query = "UPDATE users SET password=? WHERE user_id=?";
+    $stmt = $conn->prepare($reset_query);
+    $stmt->bind_param("si", $password, $id);
+
+    if (!$stmt->execute()) {
+        $_SESSION["reset_password_error"] = ["error" => "Error updating password."];
         return false;
     }
     return true;
 }
+
 
 function display_error_message($err, $session_name)
 {
@@ -85,19 +97,31 @@ function find_loggedin_user($isLoggedin, $user_id, $conn)
         return;
     }
 
-    $query = "select name,email,role from users where user_id='$user_id';";
-    $result = mysqli_query($conn, $query);
+    $query = "SELECT name, email, role FROM users WHERE user_id=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
     if (!$result) {
         $_SESSION["user"] = ["status" => false];
         return;
     }
-    $user = mysqli_fetch_assoc($result);
+
+    $user = $result->fetch_assoc();
     if (!$user) {
         $_SESSION["user"] = ["status" => false];
         return;
     }
-    $_SESSION["user"] = ["status" => true, "name" => $user["name"], "email" => $user["email"], "role" => $user["role"]];
+
+    $_SESSION["user"] = [
+        "status" => true,
+        "name" => $user["name"],
+        "email" => $user["email"],
+        "role" => $user["role"]
+    ];
 }
+
 function logout_user($isloggedIn, $user_details)
 {
     if ($_SESSION["$isloggedIn"]) unset($_SESSION[$isloggedIn]);

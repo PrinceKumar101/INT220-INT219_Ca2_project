@@ -15,12 +15,12 @@ $success_message = $success ? $success[array_key_first($success)] : null;
 
             <div class="flex flex-col gap-2">
                 <label for="name" class="text-(--primary-text-color) font-medium">Name</label>
-                <input type="text" placeholder="Dark Shadow" name="name" required
+                <input type="text" placeholder="UserName" name="name" required
                     class="bg-(--primary-color)/10 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all">
             </div>
             <div class="flex flex-col gap-2">
                 <label for="email" class="text-(--primary-text-color) font-medium">Email</label>
-                <input type="email" placeholder="MrDark@gmail.com" name="email" required
+                <input type="email" placeholder="example@gmail.com" name="email" required
                     class="bg-(--primary-color)/10 text-(--primary-text-color) rounded p-2 border border-(--primary-color) focus:outline-none focus:ring-2 focus:ring-(--primary-color) transition-all">
             </div>
             <div class="flex flex-col gap-2">
