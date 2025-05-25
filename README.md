@@ -35,8 +35,8 @@
 ### 📥 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/agriconnect.git
-cd agriconnect
+git clone https://github.com/PrinceKumar101/INT220-INT219_Ca2_project.git
+cd INT220-INT219_Ca2_project
 ```
 
 ---
@@ -46,6 +46,7 @@ cd agriconnect
 ```markdown
 - ✅ XAMPP (Apache + MySQL)
 - ✅ Node.js and npm
+- ✅ Composer
 - ✅ A code editor (e.g., VS Code)
 ```
 
@@ -63,14 +64,14 @@ cd agriconnect
 3. Start the Apache and MySQL modules.
 4. Open your browser and visit:
 
-   http://localhost/agriconnect
+   http://localhost/INT220-INT219_Ca2_project
 ```
 
 ---
 
 ### 🗄️ 4. Database Configuration
 
-```markdown
+```
 1. Go to http://localhost/phpmyadmin
 
 2. Create a new database:
@@ -120,9 +121,12 @@ DB_NAME=agriconnect_db
 ```bash
 # Install dependencies
 npm install
+composer install
 
 # Run Tailwind in development mode
 npm run dev
+
+
 ```
 
 > This will compile your Tailwind CSS files and watch for changes automatically.
@@ -134,7 +138,7 @@ npm run dev
 ```markdown
 Visit the application in your browser:
 
-http://localhost/agriconnect
+http://localhost/INT220-INT219_Ca2_project
 
 You should see:
 - ✅ Weather Forecast Dashboard
