@@ -30,38 +30,6 @@ AgrNav is a web-based platform built with **PHP**, **HTML**, **Tailwind CSS**, a
 
 ---
 
-# 🌾 AgriConnect - Empowering Farmers with Real-time Weather and Global Collaboration
-
-AgriConnect is a web-based platform built with **PHP**, **HTML**, **Tailwind CSS**, and **JavaScript** to provide **real-time weather forecasts** and a **global communication platform for farmers and agricultural experts**. It also includes an **AI-powered chatbot** to help farmers with instant answers to their farming-related queries.
-
----
-
-## 🚀 Features
-
-- **📡 Real-time Weather Forecasting**
-  - Accurate, location-based weather updates.
-  - Supports planning and decision-making for farmers.
-
-- **🌍 Global Farmer & Expert Community**
-  - Connect with other farmers and experts around the world.
-  - Share knowledge, ask questions, and solve problems collaboratively.
-
-- **🤖 Smart AI Chatbot**
-  - Provides 24/7 assistance to farmers.
-  - Answers common farming queries using AI and natural language processing.
-
----
-
-## 🛠️ Technologies Used
-
-- **PHP** – Backend scripting and server-side logic  
-- **HTML** – Page structure and content  
-- **Tailwind CSS** – Utility-first CSS framework for styling  
-- **JavaScript** – Client-side interactivity and API handling  
-- **MySQL** – Relational database for storing user and forum data  
-
----
-
 ## ⚙️ Installation & Setup Guide
 
 Follow these steps to install and run the project locally:
